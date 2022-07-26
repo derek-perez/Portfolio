@@ -7,16 +7,16 @@ import { NavbarResponsive } from "../components/Navbars/NavbarResponsive";
 
 export const ContactoScreen = () => {
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const regExp = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
 
-    const nombre = document.getElementById('nombre') as HTMLInputElement;
-    const presupuesto = document.getElementById('presupuesto') as HTMLInputElement;
-    const telefono = document.getElementById('telefono') as HTMLInputElement;
-    const email = document.getElementById('email') as HTMLInputElement;
-    const mensaje = document.getElementById('mensaje') as HTMLInputElement;
-    const proyecto = document.getElementById('proyecto') as HTMLInputElement;
+    const nombre = document.getElementById('nombre');
+    const presupuesto = document.getElementById('presupuesto');
+    const telefono = document.getElementById('telefono');
+    const email = document.getElementById('email');
+    const mensaje = document.getElementById('mensaje');
+    const proyecto = document.getElementById('proyecto');
 
     if (nombre.value === '' ||
       presupuesto.value === 'Escoje tu presupuesto' ||
@@ -164,14 +164,14 @@ const styles = {
   container: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column',
     alignItmes: 'cemter'
   },
 
   form: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: '25px'
@@ -179,14 +179,14 @@ const styles = {
   divForm: {
     width: '50%',
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'space-between'
   },
   divInput: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column',
     alignItems: 'center',
     marginBottom: '25px'
   },
@@ -194,7 +194,7 @@ const styles = {
     width: '50%',
     fontSize: '20px',
     marginBottom: '5px',
-    textAlign: 'left' as 'left'
+    textAlign: 'left'
   },
   input: {
     width: '50%',
@@ -212,7 +212,7 @@ const styles = {
     backgroundColor: '#ACACAC',
     border: '1px solid #ACACACac',
     minHeight: '200px',
-    resize: 'none' as 'none'
+    resize: 'none'
   },
 
   button: {
