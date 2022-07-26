@@ -1,13 +1,81 @@
+import Swal from 'sweetalert2';
+
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbars/Navbar"
 import { NavbarResponsive } from "../components/Navbars/NavbarResponsive";
+
+import * as env from '../data.json';
 
 
 export const ContactoScreen = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  } 
+    const regExp = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
+
+    const nombre = document.getElementById('nombre') as HTMLInputElement;
+    const presupuesto = document.getElementById('presupuesto') as HTMLInputElement;
+    const telefono = document.getElementById('telefono') as HTMLInputElement;
+    const email = document.getElementById('email') as HTMLInputElement;
+    const mensaje = document.getElementById('mensaje') as HTMLInputElement;
+    const proyecto = document.getElementById('proyecto') as HTMLInputElement;
+
+    if (nombre.value === '' ||
+      presupuesto.value === 'Escoje tu presupuesto' ||
+      telefono.value === '' ||
+      email.value === '' ||
+      mensaje.value === '' ||
+      proyecto.value === 'Tipo de proyecto'
+    ) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Hubo un error',
+        text: 'Todos los campos se deben completar'
+      })
+    }
+
+    if (email.value !== '') {
+      if (!regExp.test(email.value)) {
+        return Swal.fire({
+          title: 'Error',
+          text: 'Por favor, introduzca un correo válido',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        })
+      }
+    }
+
+    // No tengo una referencia de "Email", no sé que poner...
+    Email.send({
+      Host: env.host,
+      Username: env.user,
+      Password: env.password,
+      To: 'chugus808106@gmail.com',
+      From: "chugus808106@gmail.com",
+      Subject: `Quiero: ${proyecto.value}`,
+      Body: `<div>
+        Hola, soy ${nombre.value}\n...
+        Quiero: ${proyecto.value} y de presupuesto tengo ${presupuesto.value}.\n
+        Estos son mis datos de contacto:\n
+        Email: ${email.value}, Teléfono: ${telefono.value}\n
+        \n
+        Mensaje:\n
+        ${mensaje.value}
+      </div>`
+    })
+      .then(() => {
+        Swal.fire({
+          icon: 'success',
+          title: '¡Listo!',
+          text: '¡Listo! Se ha enviado correctamente tu solicitud...',
+          confirmButtonText: 'OK'
+        })
+      })
+      .catch(console.log);
+
+
+
+  }
 
   return (
     <div style={styles.container}>
@@ -31,32 +99,32 @@ export const ContactoScreen = () => {
               <label htmlFor="nombre" style={styles.label}>
                 <i className="fa fa-user"></i> &nbsp; Nombre:
               </label>
-              <input id='nombre' name='nombre' type='text' className="inputContainer" placeholder="Nombre" style={styles.input} />
+              <input id='nombre' name='nombre' type='text' className="inputContainer" placeholder="Nombre" style={styles.input} required />
             </div>
             <div style={styles.divInput}>
               <label htmlFor="presupuesto" style={styles.label}>
                 <i className="fa fa-money"></i> &nbsp; Presupuesto:
               </label>
-              <select name='presupuesto' className="inputContainer" style={styles.input}>
+              <select id='presupuesto' name='presupuesto' className="inputContainer" style={styles.input} required>
                 <option defaultValue='Presupuesto'>Escoje tu presupuesto</option>
                 <option value='-2500'>-$2500</option>
                 <option value='5-10'>-$5000 - $10,000</option>
                 <option value='10-25'>-$10,000 - $25,000</option>
                 <option value='25-50'>-$25,000 - $50,000</option>
-                <option value='-50'>-+$50,000</option>
+                <option value='+50'>-+$50,000</option>
               </select>
             </div>
             <div style={styles.divInput}>
               <label htmlFor="telefono" style={styles.label}>
                 <i className="fa fa-phone"></i> &nbsp; Número de teléfono:
               </label>
-              <input id='telefono' name='telefono' type='text' className="inputContainer" placeholder="+52 55 5555 5555" style={styles.input} />
+              <input id='telefono' name='telefono' type='tel' className="inputContainer" placeholder="+52 55 5555 5555" style={styles.input} required />
             </div>
             <div style={styles.divInput}>
               <label htmlFor="email" style={styles.label}>
                 <i className="fa fa-envelope"></i> &nbsp; Correo electrónico:
               </label>
-              <input id='email' name='email' type='text' className="inputContainer" placeholder="example@domain.com" style={styles.input} />
+              <input id='email' name='email' type='email' className="inputContainer" placeholder="example@domain.com" style={styles.input} required />
             </div>
           </div>
 
@@ -65,7 +133,7 @@ export const ContactoScreen = () => {
               <label htmlFor="proyecto" style={styles.label}>
                 <i className="fa fa-object-ungroup"></i> &nbsp; Tipo de proyecto:
               </label>
-              <select name='proyecto' className="inputContainer" style={styles.input}>
+              <select id="proyecto" name='proyecto' className="inputContainer" style={styles.input} required>
                 <option defaultValue='proyecto'>Tipo de proyecto</option>
                 <option value='sitio_web'>Sitio Web o Aplicación Web</option>
                 <option value='aplicacion_movil'>Aplicación Móvil</option>
@@ -78,7 +146,7 @@ export const ContactoScreen = () => {
               <label htmlFor="mensaje" style={styles.label}>
                 <i className="fa fa-newspaper-o"></i> &nbsp; Mensaje:
               </label>
-              <textarea id="mensaje" name="mensaje" className="inputContainer" placeholder="Aquí escribe tu mensaje" style={styles.textarea}></textarea>
+              <textarea id="mensaje" name="mensaje" className="inputContainer" placeholder="Aquí escribe tu mensaje" style={styles.textarea} required></textarea>
             </div>
           </div>
         </div>

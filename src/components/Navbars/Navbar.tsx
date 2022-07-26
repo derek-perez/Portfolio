@@ -27,13 +27,13 @@ export const Navbar = () => {
             />
 
             <div id='linksNavbar' style={{ marginTop: '40px' }}>
-                <Link to='/' className='links' style={styles.link}>
+                <Link to='/#intro' className='links' style={styles.link}>
                     Inicio
                 </Link>
-                <Link to='/proyectos' className='links' style={styles.link}>
+                <Link to='/proyectos#intro' className='links' style={styles.link}>
                     Projectos
                 </Link>
-                <Link to='/certificados' className='links' style={styles.link}>
+                <Link to='/certificados#intro' className='links' style={styles.link}>
                     Certificados
                 </Link>
                 <Link to='/contacto' className='links' style={styles.link}>

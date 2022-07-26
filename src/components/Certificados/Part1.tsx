@@ -4,7 +4,7 @@ import { NavbarResponsive } from "../Navbars/NavbarResponsive"
 
 export const Part1 = () => {
     return (
-        <div id="intro" className="section sectionActive" style={styles.container}>
+        <div id="intro" className="section" style={styles.container}>
             <Navbar />
             <NavbarResponsive />
 
@@ -19,7 +19,9 @@ export const Part1 = () => {
                     habilidades y capacidades competentes necesarias.
                     <br />
                     <br />
-                    Te iré presentando los certificados de forma cronológica...
+                    Te iré presentando los certificados de forma cronológica. <b>¡Ah!</b> Y una cosa importante, ahí dice que completé el certificado en ciertas horas,
+                    pero, la verdad es que pasé más tiempo, con las tareas, los desafíos de codificación, etc... Así que no fueron solo unos días el tiempo que
+                    me llevó terminar cierto curso, en muchos casos, me tomó incluso <b>meses</b>.
                 </p>
             </div>
         </div>

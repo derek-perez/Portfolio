@@ -2,6 +2,13 @@
 
 export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
 
+    let hash = window.location.hash;
+
+    if (hash === '') {
+        hash = "#intro"
+    }
+    
+
     if (whatScreen === 'InicioScreen') {
         return (
             <div id='navbarColumn' style={styles.container}>
@@ -9,27 +16,27 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                     <a
                         href='#intro'
                         title='Introducción'
-                        className='columnNavLinks activeNavColumn'
+                        className={`columnNavLinks ${hash === '#intro' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></a>
                     <a
                         href='#skills'
                         title='Habilidades y Capacidades'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#skills' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></a>
                     <a
                         href='#someProjects'
                         title='Algunos projectos'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#someProjects' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></a>
                     <a
                         href='#someCertificates'
                         title='Algunos certificados'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#someCertificates' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></a>
                     <a
                         href='#linkContact'
                         title='¡Vamos, platiquemos!'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#linkContact' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></a>
                 </div>
             </div>
@@ -41,37 +48,37 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                     <a
                         href='#intro'
                         title='Introducción'
-                        className='columnNavLinks activeNavColumn'
+                        className={`columnNavLinks ${hash === '#intro' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         href='#Blogi'
                         title='Blogi'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Blogi' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         href='#Pizzacode_Web'
                         title='Pizzacode Web'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Pizzacode_Web' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         href='#NasaDex'
                         title='NasaDex'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#NasaDex' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         href='#Pizzacode_Movil'
                         title='Pizzacode Móvil'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Pizzacode_Movil' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         href='#Habitual'
                         title='Habitual'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Habitual' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         href='#Portafolio'
                         title='Portafolio'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Portafolio' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                 </div>
             </div>
@@ -87,61 +94,61 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                         style={{ height: '30px' }}
                         href='#intro'
                         title='Introducción'
-                        className='columnNavLinks activeNavColumn'
+                        className={`columnNavLinks ${hash === '#intro' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#Desarrollo_Web'
                         title='Desarrollo Web'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Desarrollo_Web' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#Chatbots'
                         title='Chatbots'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Chatbots' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#JavaScript'
                         title='JavaScript'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#JavaScript' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#PWAs'
                         title='PWAs'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#PWAs' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#NodeJs'
                         title='NodeJs'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#NodeJs' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#React_bases'
                         title='Bases de React'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#React_bases' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#React_Pro'
                         title='React Avanzado'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#React_Pro' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#React_Native'
                         title='React Native'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#React_Native' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                     <a
                         style={{ height: '30px' }}
                         href='#Design_UI-UX'
                         title='Diseñador Web & Móvil'
-                        className='columnNavLinks inactiveNavColumn'
+                        className={`columnNavLinks ${hash === '#Design_UI-UX' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></a>
                 </div>
             </div>

@@ -1,18 +1,20 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom";
+
 import { useShow } from "../../hooks/useShow";
 
 
 export const PreviewProject = ({ which = 0 }: { which: number }) => {
 
     const clicked = useRef(false);
-    const [justifyContent, setJustifyContent] = useState('flex-start');
+    const navigate = useNavigate();
 
     useShow({
         p: 'pInfoProyectos',
         button: 'infoProyectosButton',
         width: 830
     });
-    
+
 
     const infos = [
         `<b>Blogi</b>, fue uno de mis primeros proyectos relevantes que hice utilizando como Backend: NodeJs. <b>Blogi</b> utiliza una <b>RESTful </b> 
@@ -33,9 +35,9 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
         const pInfoProyectos = document.querySelector('#pInfoProyectos');
         if (!pInfoProyectos) return;
 
-        if (which === 0) setJustifyContent('flex-start')
-        if (which === 1) setJustifyContent('center')
-        if (which === 2) setJustifyContent('flex-end')
+        if (which === 0) document.getElementById('miniProjects')!.style.justifyContent = 'flex-start';
+        if (which === 1) document.getElementById('miniProjects')!.style.justifyContent = 'center';
+        if (which === 2) document.getElementById('miniProjects')!.style.justifyContent = 'flex-end';
 
         pInfoProyectos.innerHTML = infos[which];
     }, [which]);
@@ -54,12 +56,10 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
 
             <div
                 id='miniProjects'
-                style={{
-                    ...styles.miniProjects,
-                    justifyContent: `${justifyContent}`
-                }}
+                style={styles.miniProjects}
             >
                 <div
+                    id="previewBlogi"
                     style={{
                         ...(which === 0) ? styles.miniProject : styles.inactiveMiniProject,
                         transition: '0.5s'
@@ -70,12 +70,19 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                         Blogi se basa en una arquitectura de sistemas web RESTful, es una PWA con un
                         sistema de Notificaciones PUSH, también cuenta con un foro...
                     </p>
-                    <div className='seeProjectBTN' style={styles.buttonProject}>
+                    <div
+                        className='seeProjectBTN'
+                        style={styles.buttonProject}
+                        onClick={() => {
+                            navigate('/proyectos#Blogi')
+                        }}
+                    >
                         <span>Ver proyecto</span>
                         <i style={{ fontSize: '30px' }} className="fa fa-long-arrow-right"></i>
                     </div>
                 </div>
                 <div
+                    id='previewPizzacodeWeb'
                     style={{
                         ...(which === 1) ? styles.miniProject : styles.inactiveMiniProject,
                         transition: '0.5s'
@@ -87,15 +94,22 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                         Esta basado en una arquitectura de sistemas web RESTful API.
                         Este es un sitio e-commerce...
                     </p>
-                    <div style={styles.inactiveButtonProject}>
+                    <div
+                        style={styles.inactiveButtonProject}
+                        onClick={() => {
+                            navigate('/proyectos#Pizzacode_Web')
+                        }}
+                    >
                         <span>Ver proyecto</span>
                         <i style={{ fontSize: '30px' }} className="fa fa-long-arrow-right"></i>
                     </div>
                 </div>
                 <div
+                    id='previewPizzacodeMovil'
                     style={{
                         ...(which === 2) ? styles.miniProject : styles.inactiveMiniProject,
-                        transition: '0.5s'
+                        transition: '0.5s',
+                        marginRight: 0
                     }}
                 >
                     <h3 style={styles.titleProject}>Pizzacode Móvil</h3>
@@ -103,7 +117,12 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                         Pizzacode también está disponible para dispositivos Android (actualmente no pudeo para iOS).
                         Está desarrollada con React Native CLI y usa el mismo Backend que el sitio web...
                     </p>
-                    <div style={styles.inactiveButtonProject}>
+                    <div
+                        style={styles.inactiveButtonProject}
+                        onClick={() => {
+                            navigate('/proyectos#Pizzacode_Movil')
+                        }}
+                    >
                         <span>Ver proyecto</span>
                         <i style={{ fontSize: '30px' }} className="fa fa-long-arrow-right"></i>
                     </div>

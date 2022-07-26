@@ -32,13 +32,13 @@ export const NavbarResponsive = () => {
                 />
 
                 <div style={styles.navLinks}>
-                    <Link to='/' className='links' style={styles.link}>
+                    <Link to='/#intro' className='links' style={styles.link}>
                         <i className="fa fa-home"></i> &nbsp; Inicio
                     </Link>
-                    <Link to='/proyectos' className='links' style={styles.link}>
+                    <Link to='/proyectos#intro' className='links' style={styles.link}>
                         <i className="fa fa-address-book"></i> &nbsp; Proyectos
                     </Link>
-                    <Link to='/certificados' className='links' style={styles.link}>
+                    <Link to='/certificados#intro' className='links' style={styles.link}>
                         <i className="fa fa-vcard"></i> &nbsp; Certificados
                     </Link>
                     <Link to='/contacto' className='links' style={styles.link}>

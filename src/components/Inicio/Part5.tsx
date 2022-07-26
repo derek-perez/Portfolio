@@ -1,7 +1,11 @@
-import { Footer } from "../Footer"
+import { Footer } from "../Footer";
+import { useNavigate } from "react-router-dom";
 
 
 export const Part5 = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div id='linkContact' className="section" style={styles.container}>
             <div style={styles.content}>
@@ -15,7 +19,12 @@ export const Part5 = () => {
                     y así poder negociar y llegar a un acuerdo para el desarrollo de ese proyecto que traes en mente...
                 </p>
 
-                <button style={styles.button}>
+                <button
+                    onClick={() => {
+                        navigate('/contacto')
+                    }}
+                    style={styles.button}
+                >
                     Rellenar formulario
                     <i className="fa fa-long-arrow-right"></i>
                 </button>
