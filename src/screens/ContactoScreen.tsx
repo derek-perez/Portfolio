@@ -4,8 +4,6 @@ import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbars/Navbar"
 import { NavbarResponsive } from "../components/Navbars/NavbarResponsive";
 
-import * as env from '../data.json';
-
 
 export const ContactoScreen = () => {
 
@@ -47,9 +45,9 @@ export const ContactoScreen = () => {
 
     // No tengo una referencia de "Email", no sé que poner...
     Email.send({
-      Host: env.host,
-      Username: env.user,
-      Password: env.password,
+      Host: 'smtp.elasticemail.com',
+      Username: 'chugus808106@gmail.com',
+      Password: 'AEE7E570F4728213A5C45CC08D5412EB5158',
       To: 'chugus808106@gmail.com',
       From: "chugus808106@gmail.com",
       Subject: `Quiero: ${proyecto.value}`,
