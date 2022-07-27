@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import emailjs from '@emailjs/browser';
 
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbars/Navbar"
@@ -7,16 +8,16 @@ import { NavbarResponsive } from "../components/Navbars/NavbarResponsive";
 
 export const ContactoScreen = () => {
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const regExp = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
 
-    const nombre = document.getElementById('nombre');
-    const presupuesto = document.getElementById('presupuesto');
-    const telefono = document.getElementById('telefono');
-    const email = document.getElementById('email');
-    const mensaje = document.getElementById('mensaje');
-    const proyecto = document.getElementById('proyecto');
+    const nombre = document.getElementById('nombre')! as HTMLInputElement;
+    const presupuesto = document.getElementById('presupuesto')! as HTMLInputElement;
+    const telefono = document.getElementById('telefono')! as HTMLInputElement;
+    const email = document.getElementById('email')! as HTMLInputElement;
+    const mensaje = document.getElementById('mensaje')! as HTMLInputElement;
+    const proyecto = document.getElementById('proyecto')! as HTMLInputElement;
 
     if (nombre.value === '' ||
       presupuesto.value === 'Escoje tu presupuesto' ||
@@ -43,33 +44,18 @@ export const ContactoScreen = () => {
       }
     }
 
-    // No tengo una referencia de "Email", no sé que poner...
-    Email.send({
-      Host: 'smtp.elasticemail.com',
-      Username: 'chugus808106@gmail.com',
-      Password: 'AEE7E570F4728213A5C45CC08D5412EB5158',
-      To: 'chugus808106@gmail.com',
-      From: "chugus808106@gmail.com",
-      Subject: `Quiero: ${proyecto.value}`,
-      Body: `<div>
-        Hola, soy ${nombre.value}\n...
-        Quiero: ${proyecto.value} y de presupuesto tengo ${presupuesto.value}.\n
-        Estos son mis datos de contacto:\n
-        Email: ${email.value}, Teléfono: ${telefono.value}\n
-        \n
-        Mensaje:\n
-        ${mensaje.value}
-      </div>`
-    })
+    emailjs.sendForm('service_7u04kqd', 'template_snt82x8', document.getElementById('formContacto') as HTMLFormElement, '_moZ1HIC4CbJSNlO0')
       .then(() => {
         Swal.fire({
-          icon: 'success',
           title: '¡Listo!',
-          text: '¡Listo! Se ha enviado correctamente tu solicitud...',
-          confirmButtonText: 'OK'
+          text: '¡Listo! Se ha enviado exitósamente la solicitud',
+          icon: 'success',
+          confirmButtonText: 'Ok'
         })
-      })
-      .catch(console.log);
+      }, (err) => {
+        console.log(JSON.stringify(err));
+      });
+
 
 
 
@@ -164,14 +150,14 @@ const styles = {
   container: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as 'column',
     alignItmes: 'cemter'
   },
 
   form: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as 'column',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: '25px'
@@ -179,14 +165,14 @@ const styles = {
   divForm: {
     width: '50%',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as 'column',
     alignItems: 'flex-start',
     justifyContent: 'space-between'
   },
   divInput: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as 'column',
     alignItems: 'center',
     marginBottom: '25px'
   },
@@ -194,7 +180,7 @@ const styles = {
     width: '50%',
     fontSize: '20px',
     marginBottom: '5px',
-    textAlign: 'left'
+    textAlign: 'left' as 'left'
   },
   input: {
     width: '50%',
@@ -212,7 +198,7 @@ const styles = {
     backgroundColor: '#ACACAC',
     border: '1px solid #ACACACac',
     minHeight: '200px',
-    resize: 'none'
+    resize: 'none' as 'none'
   },
 
   button: {
