@@ -73,7 +73,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column' as 'column',
         alignItems: 'center',
-        marginTop: '150px',
+        marginTop: '50px',
         paddingTop: '25px'
     },
 

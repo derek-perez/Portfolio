@@ -80,36 +80,36 @@ export const Proyecto1 = () => {
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Esta es la página para iniciar sesión. Y la página para registrarse es muy similar. Y puedes acceder son tu cuenta de Google.'
+                    alt='Esta es la página para iniciar sesión. Y la página para registrarse es muy similar. Y también, puedes acceder con tu cuenta de Google.'
                     src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115732_pojbw6.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Hay una página dedicada completamente a los artículos, donde podrás ver los más recientes y por categorías.'
+                    alt='Hay una página dedicada completamente a los artículos, donde podrás ver los más recientes y separados por categorías.'
                     src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-07-23_151543_sypwsx.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Así es como se ve un artículo en Blog. Puedes ver la información del autor y hasta compartir el artículo en redes sociales.'
+                    alt='Así es como se ve un artículo en Blogi. Puedes ver la información del autor y hasta compartir el artículo en redes sociales.'
                     src='https://res.cloudinary.com/chugus/image/upload/v1658609266/Captura_de_pantalla_2022-07-23_154630_vhouwx.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Este es el "Dashboard" (o panel de control) que tienes cuando creas una cuenta en Blog y has escogido un plan.'
+                    alt='Este es el "Dashboard" (o Panel de control) que tienes cuando creas una cuenta en Blogi y has escogido un plan.'
                     src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115803_xljulf.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Desarrollé un pequeño "Word" para la edición del artículo, puedes cambiar el tamaño de la letra, la alineación del texto,
-                    puedes agregar alguna imágen mediante alguna URL o desde tus archivos.'
+                    alt='Desarrollé un pequeño "Word" para la redacción/edición del artículo, puedes cambiar el tamaño de la letra, la alineación del texto,
+                    puedes agregar alguna imágen mediante una URL o desde tus archivos.'
                     src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_120239_add8w9.jpg'
                 />
                 <img
@@ -129,7 +129,7 @@ export const Proyecto1 = () => {
 const styles = {
     container: {
         width: '95%',
-        marginTop: '100px',
+        marginTop: '50px',
         display: 'flex',
         flexDirection: 'column' as 'column',
         alignItems: 'center'

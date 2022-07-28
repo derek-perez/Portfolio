@@ -103,7 +103,7 @@ export const Proyecto3 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '100px',
+    marginTop: '50px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'

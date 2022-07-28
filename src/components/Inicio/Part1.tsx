@@ -22,6 +22,10 @@ export const Part1 = () => {
                         ¿Qué tal...? Soy un Diseñador/Desarrollador Web & Móvil listo y preparado para poder diseñar, codificar y lanzar tu proyecto.
                         Soy un Desarrollador Web Full Stack que utiliza la "MERN Stack" (o la pila MERN) para el desarrollo de los sitios web, y para
                         el desarrollo de las aplicaciones móviles, utilizo React Native CLI (actualmente solo aplicaciones para Android).
+                        <br />
+                        <br />
+                        Y ahorita me encuentro estudiando <b>Inteligencia Artificial</b>, más especificamente: <b>Desarollo de Redes Neuronales</b>.
+                        Ya pronto obtendré mis certificados para mostrartelos...
                     </p>
                 </div>
             </div>

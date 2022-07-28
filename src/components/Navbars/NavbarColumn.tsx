@@ -43,7 +43,7 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
         )
     } else if (whatScreen === 'ProyectosScreens') {
         return (
-            <div id='navbarColumnProyectos' style={styles.container}>
+            <div id='navbarColumn' style={styles.container}>
                 <div style={styles.content}>
                     <a
                         href='#intro'
@@ -85,11 +85,8 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
         )
     } else if (whatScreen === 'CertificadosScreen') {
         return (
-            <div id='navbarColumnCertificados' style={styles.container}>
-                <div style={{
-                    ...styles.content,
-                    height: '90%'
-                }}>
+            <div id='navbarColumn' style={styles.container}>
+                <div style={styles.content}>
                     <a
                         style={{ height: '30px' }}
                         href='#intro'
@@ -171,7 +168,7 @@ const styles = {
         justifyContent: 'center'
     },
     content: {
-        height: '80%',
+        height: '90%',
         display: 'flex',
         flexDirection: 'column' as 'column',
         alignItems: 'center',

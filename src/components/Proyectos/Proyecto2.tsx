@@ -71,21 +71,21 @@ export const Proyecto2 = () => {
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Esto es parte del menú. Desde aquí puedes escoger los productos que quieras y están separados en tres categorías.'
+          alt='Esto es parte del menú. Desde aquí, puedes escoger los productos que quieras y están separados en tres categorías.'
           src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172415_og36zm.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Este es el buscador. Aquí puedes buscar los productos o por el nombre o por la descripción.'
+          alt='Este es el buscador. Aquí puedes buscar los productos por nombre o con alguna palabra clave.'
           src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172556_z7vtp3.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Así es como se ve el carrito de compras. Tienes la opción de eliminar productos, modificar la cantidad de estos y tambiém agregar otros desde ahí.'
+          alt='Así es como se ve el carrito de compras. Tienes la opción de eliminar, modificar la cantidad y agregar productos desde ahí.'
           src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172453_k6dem0.jpg'
         />
         <img
@@ -106,7 +106,7 @@ export const Proyecto2 = () => {
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='incluso, puedes editar o añadir tarjetas de credito o débito de una manera muy interactiva y dinámica.'
+          alt='Incluso, puedes editar o añadir tarjetas de credito o débito de una manera muy interactiva y dinámica.'
           src='https://res.cloudinary.com/chugus/image/upload/v1658615285/Captura_de_pantalla_2022-07-23_172740_cgzild.jpg'
         />
       </div>
@@ -119,7 +119,7 @@ export const Proyecto2 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '100px',
+    marginTop: '50px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'

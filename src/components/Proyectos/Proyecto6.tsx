@@ -55,7 +55,7 @@ export const Proyecto6 = () => {
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel verticalImg'
-                    alt='En este boceto se ve el flujo de usuario si presiona en el menú el item de Certificados.'
+                    alt='En este boceto se ve el flujo de usuario si presiona en el menú el item de "Certificados".'
                     src='https://res.cloudinary.com/chugus/image/upload/v1658705392/Captura_de_pantalla_2022-07-24_182823_bmfmsb.jpg'
                 />
                 <img
@@ -82,7 +82,7 @@ export const Proyecto6 = () => {
 const styles = {
     container: {
         width: '95%',
-        marginTop: '100px',
+        marginTop: '50px',
         minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column' as 'column',

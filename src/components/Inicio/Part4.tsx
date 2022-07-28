@@ -95,7 +95,7 @@ const styles = {
         flexDirection: 'column' as 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: '150px',
+        marginTop: '50px',
         paddingTop: '25px'
     },
 

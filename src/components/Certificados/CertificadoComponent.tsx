@@ -58,7 +58,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column' as 'column',
         alignItems: 'center',
-        marginTop: '100px',
+        marginTop: '50px',
         paddingTop: '50px'
     },
 

@@ -60,7 +60,7 @@ export const Proyecto4 = () => {
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Parte de la página principal de la aplicación móvil Pizzacode. Aquí, ha diferencia del sitio web, hay carruseles en la página principal.'
+          alt='Parte de la página principal de la aplicación móvil Pizzacode. Aquí, a diferencia del sitio web, hay carruseles en la página principal.'
           src='https://res.cloudinary.com/chugus/image/upload/v1658632450/Screenshot_20220723-180621_Pizzacode_f7onr8.jpg'
         />
         <img
@@ -81,7 +81,7 @@ export const Proyecto4 = () => {
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Este es el buscador de la aplicación. Aquí puedes buscar los productos o por el nombre o por la descripción.'
+          alt='Este es el buscador de la aplicación. Aquí puedes buscar los productos por nombre o por una palabra clave.'
           src='https://res.cloudinary.com/chugus/image/upload/v1658632567/Screenshot_20220723-180645_Pizzacode_r4w7up.jpg'
         />
         <img
@@ -108,7 +108,7 @@ export const Proyecto4 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '100px',
+    marginTop: '50px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'

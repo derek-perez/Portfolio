@@ -39,7 +39,7 @@ export const Part5 = () => {
 
 const styles = {
     container: {
-        marginTop: '150px',
+        marginTop: '50px',
         width: '95%',
         minHeight: '70vh',
         display: 'flex',

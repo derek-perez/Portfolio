@@ -63,7 +63,7 @@ export const Part2 = () => {
           <b>Lo que desarrollo:</b>
           <p style={{ marginTop: '2px', marginBottom: '25px' }}>UI, UX, Aplicaciones Web & Móvil</p>
 
-          <b>Herrmientas que utilizo:</b>
+          <b>Herramientas que utilizo:</b>
           <ul>
             <li style={styles.itemListSkill}>Figma</li>
             <li style={styles.itemListSkill}>Concepts</li>
@@ -108,7 +108,7 @@ const styles = {
     alignItems: 'center',
     justifyItems: 'center',
     gap: '10px 10px',
-    marginTop: '150px',
+    marginTop: '50px',
     paddingTop: '35px',
     backgroundColor: '#69BE28',
     backgroundClip: 'content-box',
