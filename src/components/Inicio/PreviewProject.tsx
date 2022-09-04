@@ -17,18 +17,18 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
 
 
     const infos = [
-        `<b>Blogi</b>, fue uno de mis primeros proyectos relevantes que hice utilizando como Backend: NodeJs. <b>Blogi</b> utiliza una <b>RESTful </b> 
+        `<b>Blogi</b>, fue uno de mis primeros proyectos relevantes que hice utilizando como Backend: NodeJs. <b>Blogi</b> utiliza una <b>RESTful API</b> 
             que yo mismo desarrollé y en ese momento, aún no implementaba en mis proyectos "React", 
             así que para el Frontend solo utilizo: <b>HTML</b>, <b>CSS</b> y <b>JavaScript</b>. <b>Blogi</b> es un administrador de blogs donde puedes alojar 
             tus blogs personales y también ver los de otros usuarios, tiene un foro y también es una <b>PWA</b> con <b>Notificaciones PUSH</b>, entre otras cosas...`,
         `<b>Pizzacode</b>, fue uno de mis primeros proyectos usando la pila "MERN" (MongoDB, Express, ReactJs, NodeJs). <b>Pizzacode</b> también utiliza
-            una <b>RESTful API</b> que yo desarrollé. En este proyecto, yo desarrollé <b>tres</b> hooks para la aplicación, y en este caso, usé el
+            una <b>RESTful API</b> que yo desarrollé. En este proyecto, desarrollé <b>tres</b> hooks para la aplicación, y en este caso, usé el
             <b>Context API</b> en vez de <b>Redux</b> ya que no es un proyecto muy grande. Como iba a hacer la aplicación móvil, decidí no hacer a
             Pizzacode una PWA.`,
         `También desarrollé la aplicación móvil para <b>Pizzacode</b> desde cero (actualmente solo para Android). Esta está desarrollada utilizando
-            el <b>CLI</b> de <b>React Native</b> (no uso Expo). Utilizé el mismo Backend, los mismos Hooks y algunos <b>Contexts</b> que utilizé para
-            el sitio web. La ventaja de utilizar React para desarrollar aplicación web y móvil, es que practicamente, puedes utilizar casi el mismo
-            código para las dos aplicaciones, así que te ahorras mucho tiempo, recursos y código para desarrollar ambas aplicaciones.`
+            el <b>CLI</b> de <b>React Native</b> (no uso Expo). Utilizé el mismo Backend, los mismos hooks y algunos <b>Contexts</b> que utilizé para
+            el sitio web. La ventaja de utilizar React para desarrollar aplicaciones web y móviles, es que practicamente, puedes utilizar casi todo el mismo
+            código para las dos versiones, así que te ahorras mucho tiempo, recursos y código para desarrollar ambas aplicaciones.`
     ]
 
     useEffect(() => {
@@ -74,7 +74,7 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                         className='seeProjectBTN'
                         style={styles.buttonProject}
                         onClick={() => {
-                            navigate('/proyectos#Blogi')
+                            navigate('/proyectos/#Blogi')
                         }}
                     >
                         <span>Ver proyecto</span>
@@ -97,7 +97,7 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                     <div
                         style={styles.inactiveButtonProject}
                         onClick={() => {
-                            navigate('/proyectos#Pizzacode_Web')
+                            navigate('/proyectos/#Pizzacode_Web')
                         }}
                     >
                         <span>Ver proyecto</span>
@@ -114,13 +114,13 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                 >
                     <h3 style={styles.titleProject}>Pizzacode Móvil</h3>
                     <p style={styles.contentProject}>
-                        Pizzacode también está disponible para dispositivos Android (actualmente no pudeo para iOS).
+                        La aplicación de Pizzacode también está disponible para dispositivos Android (actualmente no pudeo para iOS).
                         Está desarrollada con React Native CLI y usa el mismo Backend que el sitio web...
                     </p>
                     <div
                         style={styles.inactiveButtonProject}
                         onClick={() => {
-                            navigate('/proyectos#Pizzacode_Movil')
+                            navigate('/proyectos/#Pizzacode_Movil')
                         }}
                     >
                         <span>Ver proyecto</span>

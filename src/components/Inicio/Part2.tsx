@@ -2,7 +2,7 @@
 
 export const Part2 = () => {
   return (
-    <div id='skills' className="section" style={styles.container}>
+    <div id='Habilidades_y_Capacidades' className="section" style={styles.container}>
       <div
         className='someSkill'
         style={styles.skillContainer}
@@ -18,8 +18,8 @@ export const Part2 = () => {
           <ul>
             <li style={styles.itemListSkill}>Heroku</li>
             <li style={styles.itemListSkill}>Postman</li>
-            <li style={styles.itemListSkill}>Terminal</li>
             <li style={styles.itemListSkill}>MongoDB Compass</li>
+            <li style={styles.itemListSkill}>Terminal de comandos</li>
             <li style={styles.itemListSkill}>Bootstrap (algunas veces)</li>
             <li style={styles.itemListSkill}>SocketIO (si es necesario)</li>
             <li style={styles.itemListSkill}>HTML/CSS/JavaScript/TypeScript</li>
@@ -42,8 +42,8 @@ export const Part2 = () => {
         <div style={styles.partSkill}>
           <b>Herramientas/Lenguajes que utilizo:</b>
           <ul>
-            <li style={styles.itemListSkill}>Terminal</li>
             <li style={styles.itemListSkill}>Android Emulator</li>
+            <li style={styles.itemListSkill}>Terminal de comandos</li>
             <li style={styles.itemListSkill}>JavaScript/TypeScript</li>
             <li style={styles.itemListSkill}>React Native CLI (no Expo)</li>
           </ul>
@@ -60,8 +60,8 @@ export const Part2 = () => {
         <h3 style={styles.titleSkill}>Diseñador <br /> Web & Móvil</h3>
 
         <div style={styles.partSkill}>
-          <b>Lo que desarrollo:</b>
-          <p style={{ marginTop: '2px', marginBottom: '25px' }}>UI, UX, Aplicaciones Web & Móvil</p>
+          <b>Lo que diseño:</b>
+          <p style={{ marginTop: '2px', marginBottom: '25px' }}>UI, UX, Aplicaciones Web/Móvil</p>
 
           <b>Herramientas que utilizo:</b>
           <ul>
@@ -80,16 +80,27 @@ export const Part2 = () => {
           style={styles.iconSkill}
           src='https://res.cloudinary.com/chugus/image/upload/v1658190023/NN_eny7wg.svg'
         />
-        <h3 style={styles.titleSkill}>Ingeniero de <br /> Deep Learning</h3>
+        <h3 style={styles.titleSkill}>Machine/Deep Learning</h3>
 
         <div style={styles.partSkill}>
-          <b>Lo que desarrollo:</b>
+          <b>Herramientas que utilizo:</b>
+          <ul style={{ padding: 0 }}>
+            <li style={{ listStyle: 'none' }}>TensorFlow:</li>
+            <ul>
+              <li>Keras</li>
+              <li>Numpy</li>
+              <li>Pandas</li>
+              <li>Scikit-Learn</li>
+            </ul>
+          </ul>
+
+          <b>Desarrollo modelos para tareas de:</b>
           <ul>
-            <li style={styles.itemListSkill}>Machine/Deep Learning</li>
-            <li style={styles.itemListSkill}>Redes Neuronales para resolver problemas de regresión</li>
-            <li style={styles.itemListSkill}>Redes Neuronales para resolver problemas de clasificación</li>
-            <li style={styles.itemListSkill}>Redes Neuronales Convolucionales</li>
-            <li style={styles.itemListSkill}>Redes Neuronales para el NLP</li>
+            <li style={styles.itemListSkill}>Regresión</li>
+            <li style={styles.itemListSkill}>Clasificación</li>
+            <li style={styles.itemListSkill}>Visión artificial</li>
+            <li style={styles.itemListSkill}>Problemas de series de tiempo</li>
+            <li style={styles.itemListSkill}>Procesamiento del lenguaje natural (NLP)</li>
           </ul>
         </div>
       </div>
@@ -108,7 +119,7 @@ const styles = {
     alignItems: 'center',
     justifyItems: 'center',
     gap: '10px 10px',
-    marginTop: '50px',
+    marginTop: '150px',
     paddingTop: '35px',
     backgroundColor: '#69BE28',
     backgroundClip: 'content-box',

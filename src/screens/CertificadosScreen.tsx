@@ -1,9 +1,9 @@
 import { NavbarColumn } from "../components/Navbars/NavbarColumn"
-import { Part1 } from "../components/Certificados/Part1"
-import { CertificadoComponent } from "../components/Certificados/CertificadoComponent"
+import { Part1, CertificadoComponent } from "../components/Certificados/"
 
 import * as data from '../dataCertificados.json';
 import { useScroll } from "../hooks/useScroll";
+import { Footer } from "../components/Footer";
 
 
 export const CertificadosScreen = () => {
@@ -39,6 +39,8 @@ export const CertificadosScreen = () => {
           )
         })
       }
+
+      <Footer />
     </div>
   )
 }

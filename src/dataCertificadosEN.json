@@ -1,0 +1,62 @@
+{
+    "certificado1": {
+        "id": "Web_Development",
+        "whatIs": "Web Development",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275686/Captura_de_pantalla_2022-07-19_190453_balimu.jpg",
+        "list": "<li>use <b>HTML5</b></li> <li>use <b>CSS</b></li> <li>use <b>CSS</b></li> <li>use <b>Bootstrap</b></li> <li>use <b>JavaScript</b></li> <li>use <b>jQuery</b></li> <li>use PHP for backend</li>"
+    },
+    "certificado2": {
+        "id": "Web_Development Chatbots",
+        "whatIs": "Chatbots",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275686/Captura_de_pantalla_2022-07-19_190530_yjxmo8.jpg",
+        "list": "<li>use Google's tool, DialogFlow</li> <li>develop bots capable of answering dynamic data queried from a database</li> <li>develop bots capable of recognizing and extracting valuable parameters from sentences</li> <li>link bots to platforms like Facebook and Telegram</li>"
+    },
+    "certificado3": {
+        "id": "Web_Development JavaScript",
+        "whatIs": "JavaScript",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275686/Captura_de_pantalla_2022-07-19_190548_i9g1xd.jpg",
+        "list": "<li>use E6+</li> <li>use the different loops that exist (such as: if/else, for, while, etc...)</li> <li>use common functions and arrow functions</li> <li>handle the DOM, add and remove events and stuff like that</li> <li>use ternary operators (&&, ??, ||, etc..)</li> <li>use the methods offered by JavaScript</li> <li>use JavaScript in such a way that it was easy for me to learn React</li>"
+    },
+    "certificado4": {
+        "id": "Web_Development PWAs",
+        "whatIs": "PWAs",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275686/Captura_de_pantalla_2022-07-19_190629_bv8rjp.jpg",
+        "list": "<li>turn any website into a PWA</li> <li>use the <b>Share API</b></li> <li>create my own <b>PUSH Server</b></li> <li>handle different techniques for the app to work offline</li> <li>use native resources of the device (such as the camera, GPS, etc...)</li>"
+    },
+    "certificado5": {
+        "id": "Web_Development NodeJs",
+        "whatIs": "NodeJs",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275686/Captura_de_pantalla_2022-07-19_190611_mguwlw.jpg",
+        "list": "<li class='listItem'>create RESTful services</li> <li class='listItem'>use JWTs (Json Web Tokens)</li> <li class='listItem'>deploy my application on Heroku</li> <li class='listItem'>import and export files using NodeJs</li> <li class='listItem'>use SocketIO for real-time communication</li> <li class='listItem'>develop basic and interactive console applications</li> <li class='listItem'>implement third-party services such as Google APIs</li> <li class='listItem'>develop non-relational databases like <b>MongoDB</b></li>"
+    },
+    "certificado6": {
+        "id": "Web_Development React_bases",
+        "whatIs": "React",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275686/Captura_de_pantalla_2022-07-19_190646_g9imuo.jpg",
+        "list": "<li class='listItem'>use Redux</li> <li class='listItem'>use Firebase</li> <li class='listItem'>use the Context API</li> <li class='listItem'>use and develop hooks</li> <li class='listItem'>use <b>React Router Dom</b></li> <li class='listItem'>implement authentication with Google and JWTs</li> <li class='listItem'>develop websites using the MERN stack</li>"
+    },
+    "certificado7": {
+        "id": "Web_Development React_Pro",
+        "whatIs": "React Advanced",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275687/Captura_de_pantalla_2022-07-19_190721_wpvtdj.jpg",
+        "list": "<li>progress as a React developer</li> <li>use <b>Storybook</b></li> <li>deploy to <b>NPM</b></li> <li>use <b>Formik</b></li> <li>use component patterns</li>"
+    },
+    "certificado8": {
+        "id": "Mobile_Development React_Native",
+        "whatIs": "React Native",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275687/Captura_de_pantalla_2022-07-19_190705_q5u3vb.jpg",
+        "list": "<li>develop highly stylized applications</li> <li>use <b>React Navigation</b> for in-app navigation</li> <li>use different React Native components</li> <li>get device permissions to use in my app</li> <li>use native resources such as the camera, GPS, gallery, etc....</li> <li>deploy apps to Google Play Store and App Store</li>"
+    },
+    "certificado9": {
+        "id": "UI_UX",
+        "whatIs": "Web & Mobile Design",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1658275687/Captura_de_pantalla_2022-07-19_190737_aoun2t.jpg",
+        "list": "<li class='listItem'>master the principles of web and mobile design for UI/UX</li> <li class='listItem'>use techniques to work in a team and lead a project</li> <li class='listItem'>go from sketches to 'Wireframes' and then to hi-fi designs</li> <li class='listItem'>use UI/UX best practices that are trending in the industry</li> <li class='listItem'>design professional logos and design options for any brand</li> <li class='listItem'>design for all types of devices using Figma and other tools</li> <li class='listItem'>master Figma for app design and convert them to HTML and CSS</li>"
+    },
+    "certificado10": {
+        "id": "AI",
+        "whatIs": "Deep Learning",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1662064059/UC-c57978a4-a118-46d0-beb7-ae254bb19512.pdf_y7dtgs.png",
+        "list": "<li class='listItem'>build image recognition, object detection, and text recognition algorithms with deep neural networks and convolutional neural networks</li> <li class='listItem'>apply deep learning for time series forecasting</li> <li class='listItem'>create all kinds of machine learning models with the latest TensorFlow 2</li> <li class='listItem'>gain the skills I need to become a certified TensorFlow developer</li>"
+    }
+}

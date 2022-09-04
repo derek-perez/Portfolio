@@ -4,7 +4,7 @@ import { NavbarResponsive } from "../Navbars/NavbarResponsive"
 
 export const Part1 = () => {
     return (
-        <div id="intro" className="section" style={styles.container}>
+        <div id="Introducción" className="section" style={styles.container}>
             <Navbar />
             <NavbarResponsive />
 

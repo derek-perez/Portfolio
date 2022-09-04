@@ -2,20 +2,26 @@ import { useEffect } from "react";
 
 
 export const useScroll = () => {
+
+    const lng = window.location.pathname
+
     useEffect(() => {
         const section = document.querySelectorAll('.section') as NodeListOf<HTMLElement>;
         const hash = window.location.hash;
 
         if (hash === '') {
-            window.history.pushState({}, "", "#intro");
+            window.history.pushState({}, "", `${lng.includes('es') ? '#Introducci%C3%B3n' : '#Introduction'}`);
 
             setTimeout(() => {
-                document.getElementById('intro')!.classList.add('sectionActive');
+                document.getElementById(`${lng.includes('es') ? 'Introducción' : 'Introduction'}`)?.classList.add('sectionActive');
             }, 500);
-            
-        } else if (hash === '#intro') {
-            document.getElementById('intro')!.classList.add('sectionActive');
+        }
 
+        if (hash === '#Introducci%C3%B3n' || hash === '#Introduction') {
+            document.getElementById(`${lng.includes('/es/') ? 'Introducción' : 'Introduction'}`)?.classList.add('sectionActive');
+
+            document.querySelector(`#navbarColumn > div > div[title*=${lng.includes('es') ? 'Introducción' : 'Introduction'}]`)?.classList.remove('inactiveNavColumn');
+            document.querySelector(`#navbarColumn > div > div[title*=${lng.includes('es') ? 'Introducción' : 'Introduction'}]`)?.classList.add('activeNavColumn');
         } else {
             section.forEach(sec => {
                 if (`#${sec.id}` === hash) {
@@ -30,34 +36,33 @@ export const useScroll = () => {
         document.addEventListener('scroll', () => {
 
             section.forEach(sec => {
-                sec.classList.remove('sectionActive');
                 let top = window.scrollY;
                 let offset = sec.offsetTop - 350;
                 let height = sec.offsetHeight;
                 let id = sec.getAttribute('id');
-
+                let ids = id?.split(' ')
+                let id_to_url = '';
 
                 if (top >= offset && top < offset + height) {
-                    window.history.pushState({}, "", `#${id}`)
+                    if (ids?.length === 2) {
+                        id = ids[0]
+                        id_to_url = ids[1]
+                    } else {
+                        id_to_url = id!
+                    }
+
+                    window.history.pushState({}, "", `#${id_to_url}`)
                     sec.classList.add('sectionActive')
 
                     navLinks.forEach(links => {
                         links.classList.remove('activeNavColumn');
 
-                        document.querySelector(`#navbarColumn > div > a[href*=${id}]`)?.classList.remove('inactiveNavColumn');
-                        document.querySelector(`#navbarColumn > div > a[href*=${id}]`)?.classList.add('activeNavColumn');
-                    })
-
-                } else if (top! >= offset && top > offset + height) {
-                    sec.classList.remove('sectionActive');
-
-                    navLinks.forEach(links => {
-                        links.classList.add('inactiveNavColumn');
+                        document.querySelector(`#navbarColumn > div > div[title*=${id}]`)?.classList.remove('inactiveNavColumn');
+                        document.querySelector(`#navbarColumn > div > div[title*=${id}]`)?.classList.add('activeNavColumn');
                     })
                 }
 
             })
         })
-
     }, []);
 }

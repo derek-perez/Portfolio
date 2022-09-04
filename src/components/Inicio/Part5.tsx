@@ -1,5 +1,5 @@
 import { Footer } from "../Footer";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export const Part5 = () => {
@@ -7,7 +7,7 @@ export const Part5 = () => {
     const navigate = useNavigate();
 
     return (
-        <div id='linkContact' className="section" style={styles.container}>
+        <div id='CV_y_Contacto' className="section" style={styles.container}>
             <div style={styles.content}>
                 <h2 style={{ textAlign: 'center', width: '80%' }}>
                     ¿Qué te ha parecido...? Vamos a ponernos en contacto para desarrollar tu proyecto
@@ -16,7 +16,10 @@ export const Part5 = () => {
                 <p style={styles.text}>
                     Esto ha sido una pequeña muestra de lo que soy y lo que hago, si quieres saber más acerca de mi,
                     puedes seguir navegando por el sitio. Ahora, para contactarme, solo rellena un pequeño formulario
-                    y así poder negociar y llegar a un acuerdo para el desarrollo de ese proyecto que traes en mente...
+                    y así poder negociar y llegar a un acuerdo para el desarrollo de ese proyecto que traes en mente.
+                    <br/>
+                    <br/>
+                    Y también puedes ver mi CV (curriculum vitae) <a style={{color: 'white'}} href="https://drive.google.com/file/d/1XGgLYxNurrOMZxpKyd2xUKTiKUkknGiW/view?usp=sharing">aquí</a>
                 </p>
 
                 <button
@@ -39,7 +42,7 @@ export const Part5 = () => {
 
 const styles = {
     container: {
-        marginTop: '50px',
+        marginTop: '150px',
         width: '95%',
         minHeight: '70vh',
         display: 'flex',

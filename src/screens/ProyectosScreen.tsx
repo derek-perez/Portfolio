@@ -1,10 +1,11 @@
-import { ModalImg } from "../components/ModalImg";
+import { useScroll } from "../hooks/useScroll";
 
 import { NavbarColumn } from "../components/Navbars/NavbarColumn"
-import { Part1 } from "../components/Proyectos/Part1"
+import { Part1, Proyecto1, Proyecto2, Proyecto3, Proyecto4, Proyecto5, Proyecto6, Proyecto7, Proyecto8, Proyecto9 } from "../components/Proyectos/"
 
-import { Proyecto1, Proyecto2, Proyecto3, Proyecto4, Proyecto5, Proyecto6 } from "../components/Proyectos/"
-import { useScroll } from "../hooks/useScroll";
+import { ModalImg } from "../components/ModalImg";
+import { Footer } from "../components/Footer";
+
 
 
 export const ProyectosScreen = () => {
@@ -29,9 +30,14 @@ export const ProyectosScreen = () => {
         <Proyecto4 />
         <Proyecto5 />
         <Proyecto6 />
+        <Proyecto7 />
+        <Proyecto8 />
+        <Proyecto9 />
       </>
 
-      <ModalImg  />
+      <ModalImg />
+
+      <Footer />
     </div>
   )
 }

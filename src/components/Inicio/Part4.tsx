@@ -24,7 +24,7 @@ export const Part4 = () => {
 
 
     return (
-        <div id='someCertificates' className="section" style={styles.container}>
+        <div id='Algunos_certificados' className="section" style={styles.container}>
             <h2 style={{ textAlign: 'center', width: '80%' }}>
                 Ahora, te enseñare unos certificados que he obtenido por completar distintos cursos
                 y algunos puntos relevantes sobre el curso por el cual he obtenido cierto certificado...
@@ -38,7 +38,7 @@ export const Part4 = () => {
                 <p id='pInfoCertificados' className="textHidden" style={{ width: '90%', lineHeight: 1.3, fontSize: '18px' }}>
                     Estos certificados, como podrás ver, son certificados de finalización. Los cursos los he tomado en Udemy y como Udemy no es una institución acreditada,
                     los certificados no tienen una validéz legal, pero sí sirven para demostrar que completé el curso que me ha dado las habilidades y capacidades competentes
-                    necesarias para el desarrollo de sitios web, aplicaciones móviles.
+                    necesarias para el desarrollo de sitios web, aplicaciones móviles y modelos de inteligencia artificial.
                 </p>
                 <div id='infoCertificadosButton' style={styles.infoButton}>Ver más +</div>
             </div>
@@ -95,7 +95,7 @@ const styles = {
         flexDirection: 'column' as 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: '50px',
+        marginTop: '150px',
         paddingTop: '25px'
     },
 

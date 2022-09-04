@@ -28,7 +28,7 @@ export const Proyecto2 = () => {
 
 
   return (
-    <div id='Pizzacode_Web' className="section" style={styles.container}>
+    <div id='Desarrollo_Web Pizzacode_Web' className="section" style={styles.container}>
       <p style={styles.title}>
         Proyecto #2: <b>Pizzacode Web</b>
       </p>
@@ -52,8 +52,8 @@ export const Proyecto2 = () => {
       }}>
         <p id='infoPizzacodeWeb' className="textHidden" style={styles.infoProyect}>
           <b>Pizzacode</b>, fue uno de mis primeros proyectos usando la pila "MERN" (MongoDB, Express, ReactJs, NodeJs). <b>Pizzacode</b> también utiliza
-          una <b>RESTful API</b> que yo desarrollé. En este proyecto, yo desarrollé <b>tres</b> hooks para la aplicación, y en este caso, usé el
-          <b> Context API</b> en vez de <b>Redux</b> ya que no es un proyecto muy grande. Como iba a hacer la aplicación móvil, decidí no hacer a
+          una <b>RESTful API</b> que yo desarrollé. En este proyecto, desarrollé <b>tres</b> hooks para la aplicación, y en este caso, usé el
+          <b>Context API</b> en vez de <b>Redux</b> ya que no es un proyecto muy grande. Y como hize la aplicación móvil, decidí no hacer a
           Pizzacode una PWA.
         </p>
         <div id='infoPizzacodeWebButton' style={styles.infoButton}>Ver más +</div>
@@ -119,7 +119,7 @@ export const Proyecto2 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '50px',
+    marginTop: '150px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'

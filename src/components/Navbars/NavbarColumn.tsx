@@ -3,41 +3,83 @@
 export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
 
     let hash = window.location.hash;
+    const lng = window.location.pathname;
 
     if (hash === '') {
-        hash = "#intro"
+        hash = `${lng.includes('es') ? '#Introducción' : '#Introduction'}`
     }
-    
+
+    const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        let div = e.target as HTMLElement;
+        let title = div.title
+
+        switch (title) {
+            // Home Page
+            case `${lng.includes('es') ? 'Introducción' : 'Introduction'}`:
+                document.getElementById(`${lng.includes('es') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: 'smooth' })
+                break;
+            case `${lng.includes('es') ? 'Habilidades_y_Capacidades' : 'Skills_and_Capabilities'}`:
+                document.getElementById(`${lng.includes('es') ? 'Habilidades_y_Capacidades' : 'Skills_and_Capabilities'}`)!.scrollIntoView({ behavior: 'smooth' })
+                break;
+            case `${lng.includes('es') ? 'Algunos_proyectos' : 'Some_projects'}`:
+                document.getElementById(`${lng.includes('es') ? 'Algunos_proyectos' : 'Some_projects'}`)!.scrollIntoView({ behavior: 'smooth' })
+                break;
+            case `${lng.includes('es') ? 'Algunos_certificados' : 'Some_certificates'}`:
+                document.getElementById(`${lng.includes('es') ? 'Algunos_certificados' : 'Some_certificates'}`)!.scrollIntoView({ behavior: 'smooth' })
+                break;
+            case `${lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}`:
+                document.getElementById(`${lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}`)!.scrollIntoView({ behavior: 'smooth' })
+                break;
+
+            // Projects & Certificates Page
+            case `${lng.includes('es') ? 'Introducción' : 'Introduction'}`:
+                document.getElementById(`${lng.includes('es') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case `${lng.includes('es') ? 'Desarrollo_Web' : 'Web_Development'}`:
+                document.getElementById(`${lng.includes('es') ? 'Desarrollo_Web' : 'Web_Development'} Blogi`)!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case `${lng.includes('es') ? 'Desarrollo_Móvil' : 'Mobile_Development'}`:
+                document.getElementById(`${lng.includes('es') ? 'Desarrollo_Móvil' : 'Mobile_Development'} NasaDex`)!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case 'UI_UX':
+                document.getElementById('UI_UX Habitual')!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case 'AI':
+                document.getElementById('AI Food101')!.scrollIntoView({ behavior: "smooth" });
+                break;
+        }
+    }
+
 
     if (whatScreen === 'InicioScreen') {
         return (
             <div id='navbarColumn' style={styles.container}>
                 <div style={styles.content}>
-                    <a
-                        href='#intro'
-                        title='Introducción'
-                        className={`columnNavLinks ${hash === '#intro' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
-                    ></a>
-                    <a
-                        href='#skills'
-                        title='Habilidades y Capacidades'
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Introducción' : 'Introduction'}
+                        className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'} `}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Habilidades_y_Capacidades' : 'Skills_and_Capabilities'}
                         className={`columnNavLinks ${hash === '#skills' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
-                    ></a>
-                    <a
-                        href='#someProjects'
-                        title='Algunos projectos'
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Algunos_proyectos' : 'Some_projects'}
                         className={`columnNavLinks ${hash === '#someProjects' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
-                    ></a>
-                    <a
-                        href='#someCertificates'
-                        title='Algunos certificados'
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Algunos_certificados' : 'Some_certificates'}
                         className={`columnNavLinks ${hash === '#someCertificates' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
-                    ></a>
-                    <a
-                        href='#linkContact'
-                        title='¡Vamos, platiquemos!'
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}
                         className={`columnNavLinks ${hash === '#linkContact' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
-                    ></a>
+                    ></div>
                 </div>
             </div>
         )
@@ -45,41 +87,31 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
         return (
             <div id='navbarColumn' style={styles.container}>
                 <div style={styles.content}>
-                    <a
-                        href='#intro'
-                        title='Introducción'
-                        className={`columnNavLinks ${hash === '#intro' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        href='#Blogi'
-                        title='Blogi'
-                        className={`columnNavLinks ${hash === '#Blogi' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        href='#Pizzacode_Web'
-                        title='Pizzacode Web'
-                        className={`columnNavLinks ${hash === '#Pizzacode_Web' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        href='#NasaDex'
-                        title='NasaDex'
-                        className={`columnNavLinks ${hash === '#NasaDex' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        href='#Pizzacode_Movil'
-                        title='Pizzacode Móvil'
-                        className={`columnNavLinks ${hash === '#Pizzacode_Movil' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        href='#Habitual'
-                        title='Habitual'
-                        className={`columnNavLinks ${hash === '#Habitual' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        href='#Portafolio'
-                        title='Portafolio'
-                        className={`columnNavLinks ${hash === '#Portafolio' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Introducción' : 'Introduction'}
+                        className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Desarrollo_Web' : 'Web_Development'}
+                        className={`columnNavLinks ${(lng.includes('es') ? hash.includes('Desarrollo_Web') : hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('es') ? 'Desarrollo_Móvil' : 'Mobile_Development'}
+                        className={`columnNavLinks ${(lng.includes('es') ? hash.includes('Desarrollo_Móvil') : hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title='UI_UX'
+                        className={`columnNavLinks ${hash.includes('UI_UX') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title='AI'
+                        className={`columnNavLinks ${hash.includes('AI') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
                 </div>
             </div>
         )
@@ -87,66 +119,31 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
         return (
             <div id='navbarColumn' style={styles.container}>
                 <div style={styles.content}>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#intro'
-                        title='Introducción'
-                        className={`columnNavLinks ${hash === '#intro' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#Desarrollo_Web'
-                        title='Desarrollo Web'
-                        className={`columnNavLinks ${hash === '#Desarrollo_Web' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#Chatbots'
-                        title='Chatbots'
-                        className={`columnNavLinks ${hash === '#Chatbots' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#JavaScript'
-                        title='JavaScript'
-                        className={`columnNavLinks ${hash === '#JavaScript' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#PWAs'
-                        title='PWAs'
-                        className={`columnNavLinks ${hash === '#PWAs' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#NodeJs'
-                        title='NodeJs'
-                        className={`columnNavLinks ${hash === '#NodeJs' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#React_bases'
-                        title='Bases de React'
-                        className={`columnNavLinks ${hash === '#React_bases' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#React_Pro'
-                        title='React Avanzado'
-                        className={`columnNavLinks ${hash === '#React_Pro' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#React_Native'
-                        title='React Native'
-                        className={`columnNavLinks ${hash === '#React_Native' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
-                    <a
-                        style={{ height: '30px' }}
-                        href='#Design_UI-UX'
-                        title='Diseñador Web & Móvil'
-                        className={`columnNavLinks ${hash === '#Design_UI-UX' ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></a>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('/es/') ? 'Introducción' : 'Introduction'}
+                        className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}
+                        className={`columnNavLinks ${(lng.includes('/es/') ? hash.includes('Desarrollo_Web') : hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title={lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'}
+                        className={`columnNavLinks ${(lng.includes('/es/') ? hash.includes('Desarrollo_Móvil') : hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title='UI_UX'
+                        className={`columnNavLinks ${hash.includes('UI_UX') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
+                    <div
+                        onClick={handleClick}
+                        title='AI'
+                        className={`columnNavLinks ${hash.includes('AI') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                    ></div>
                 </div>
             </div>
         )

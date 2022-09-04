@@ -1,15 +1,20 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 
 export const NavbarResponsive = () => {
 
+    const [lng, setLng] = useState('');
+
     useEffect(() => {
+        const currentPage = window.location.pathname;
+        currentPage.includes('es') ? setLng('es') : setLng('en');
+
         const closeNavbarResponsive = document.getElementById('closeNavbarResponsive');
         const listener = () => {
             document.getElementById('navbarResponsive')!.classList.remove('animate__fadeIn');
             document.getElementById('navbarResponsive')!.classList.add('animate__fadeOut');
-            
+
             setTimeout(() => {
                 document.getElementById('navbarResponsive')!.style.display = 'none';
             }, 500);
@@ -26,23 +31,37 @@ export const NavbarResponsive = () => {
             <div style={styles.content}>
                 <i id='closeNavbarResponsive' className="fa fa-close" style={styles.icon}></i>
 
-                <img
-                    src='https://dewey.tailorbrands.com/production/brand_version_mockup_image/872/7596161872_9e1bc302-a4d5-4889-8da9-f5fa4e6ac5d9.png?cb=1657994260'
-                    style={styles.img}
-                />
+                <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'}>
+                    <img
+                        src='https://dewey.tailorbrands.com/production/brand_version_mockup_image/872/7596161872_9e1bc302-a4d5-4889-8da9-f5fa4e6ac5d9.png?cb=1657994260'
+                        style={styles.img}
+                    />
+                </Link>
 
                 <div style={styles.navLinks}>
-                    <Link to='/#intro' className='links' style={styles.link}>
-                        <i className="fa fa-home"></i> &nbsp; Inicio
+                    <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'} className='links' style={styles.link}>
+                        <i className="fa fa-home"></i> &nbsp;
+                        {
+                            lng === 'es' ? 'Inicio' : 'Home'
+                        }
                     </Link>
-                    <Link to='/proyectos#intro' className='links' style={styles.link}>
-                        <i className="fa fa-address-book"></i> &nbsp; Proyectos
+                    <Link to={lng === 'es' ? '/es/proyectos/#Introducción' : '/en/projects/#Introduction'} className='links' style={styles.link}>
+                        <i className="fa fa-address-book"></i> &nbsp;
+                        {
+                            lng === 'es' ? 'Proyectos' : 'Projects'
+                        }
                     </Link>
-                    <Link to='/certificados#intro' className='links' style={styles.link}>
-                        <i className="fa fa-vcard"></i> &nbsp; Certificados
+                    <Link to={lng === 'es' ? '/es/certificados/#Introducción' : '/en/certificates/#Introduction'} className='links' style={styles.link}>
+                        <i className="fa fa-vcard"></i> &nbsp;
+                        {
+                            lng === 'es' ? 'Certificados' : 'Certificates'
+                        }
                     </Link>
-                    <Link to='/contacto' className='links' style={styles.link}>
-                        <i className="fa fa-phone"></i> &nbsp; Contacto
+                    <Link to={lng === 'es' ? '/es/contacto/' : '/en/contact/'} className='links' style={styles.link}>
+                        <i className="fa fa-phone"></i> &nbsp;
+                        {
+                            lng === 'es' ? 'Contacto' : 'Contact'
+                        }
                     </Link>
                 </div>
             </div>

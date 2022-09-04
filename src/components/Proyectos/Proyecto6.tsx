@@ -1,13 +1,5 @@
-import { useShow } from "../../hooks/useShow";
-
 
 export const Proyecto6 = () => {
-
-    useShow({
-        p: 'infoPortafolio',
-        button: 'infoPortafolioButton',
-        width: 446
-    })
 
     const handleClick = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
         const img = e.target as HTMLImageElement;
@@ -33,7 +25,7 @@ export const Proyecto6 = () => {
 
 
     return (
-        <div id='Portafolio' className="section" style={styles.container}>
+        <div id='UI_UX Portafolio' className="section" style={styles.container}>
             <p style={styles.title}>
                 Proyecto #6: <b>Este portafolio</b>
             </p>
@@ -44,10 +36,9 @@ export const Proyecto6 = () => {
                 alignItems: 'center'
             }}>
                 <p id='infoPortafolio' className="textHidden" style={styles.infoProyect}>
-                    Como puedes ver, este portafolio que ahorita estás viendo, lo diseñé yo. Lo diseñé desde cero, empezando desde los bocetos, a los "Wireframes"
-                    (o Marcos de Alambre), hasta un diseño de alta fidelidad. ¿Quiéres verlo? Mira abajo
+                    Como puedes ver, este portafolio que ahorita estás viendo, lo diseñé yo. Lo diseñé desde cero, empezando desde los bocetos, a los "Wireframes",
+                    hasta un diseño de alta fidelidad. ¿Quiéres verlo? Mira abajo...
                 </p>
-                <div id='infoPortafolioButton' style={styles.infoButton}>Ver más +</div>
             </div>
 
             <div id='carouselPortafolio' className="carouselProyects" style={styles.carousel}>
@@ -82,7 +73,7 @@ export const Proyecto6 = () => {
 const styles = {
     container: {
         width: '95%',
-        marginTop: '50px',
+        marginTop: '150px',
         minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column' as 'column',

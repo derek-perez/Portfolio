@@ -4,7 +4,7 @@ import { NavbarResponsive } from "../Navbars/NavbarResponsive"
 export const Part1 = () => {
 
     return (
-        <div id='intro' className="section" style={{ width: '100%' }}>
+        <div id='Introducción' className="section" style={{ width: '100%' }}>
             <Navbar />
             <NavbarResponsive />
 
@@ -20,12 +20,12 @@ export const Part1 = () => {
                     </h2>
                     <p style={{ lineHeight: '1.3' }}>
                         ¿Qué tal...? Soy un Diseñador/Desarrollador Web & Móvil listo y preparado para poder diseñar, codificar y lanzar tu proyecto.
-                        Soy un Desarrollador Web Full Stack que utiliza la "MERN Stack" (o la pila MERN) para el desarrollo de los sitios web, y para
-                        el desarrollo de las aplicaciones móviles, utilizo React Native CLI (actualmente solo aplicaciones para Android).
+                        Soy un Desarrollador Web Full Stack que utiliza la "MERN Stack" (o la pila MERN) para el desarrollo de los sitios web, y utilizo React Native CLI para
+                        el desarrollo de las aplicaciones móviles,  (actualmente solo aplicaciones para Android).
                         <br />
                         <br />
-                        Y ahorita me encuentro estudiando <b>Inteligencia Artificial</b>, más especificamente: <b>Desarollo de Redes Neuronales</b>.
-                        Ya pronto obtendré mis certificados para mostrartelos...
+                        Y algo que me gusta hacer, es desarrollar <b>modelos de inteligencia artificial</b> mediante redes neuronales utilizando <b>TensorFlow</b>.
+                        Recientemente finalizé un curso en el que pasé alrededor de 3 meses aprendiéndolo.
                     </p>
                 </div>
             </div>

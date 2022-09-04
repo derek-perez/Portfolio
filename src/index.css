@@ -11,6 +11,7 @@ body {
   background-color: #002244;
   color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #root {
@@ -112,7 +113,7 @@ body {
   opacity: 0.5;
 }
 
-.listCertificate > li {
+.listCertificate  >  li {
   font-size: 18px;
   margin-bottom: 3px;
 }
@@ -131,13 +132,13 @@ body {
     flex-direction: column-reverse;
   }
 
-  #someCertificatesContainer>img {
+  #someCertificatesContainer > img {
     margin-top: 25px;
     width: 500px !important;
     height: 350px !important;
   }
 
-  #someCertificatesContainer>div {
+  #someCertificatesContainer > div {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -150,17 +151,18 @@ body {
     align-items: flex-start !important;
   }
 
-  #footer>div:first-child {
+  #footer > div:last-child > div {
     flex-direction: column-reverse;
+    padding-left: 25px;
   }
 
-  #footer>div:last-child>div:first-child {
+  #footer > div:last-child > div:last-child > div {
     flex-direction: column-reverse;
     align-items: flex-start !important;
     padding-left: 25px;
   }
 
-  #footer>div:first-child>img {
+  #footer > div:last-child > img {
     margin-top: 25px;
   }
 
@@ -189,11 +191,17 @@ body {
     margin-top: 25px;
   }
 
-  #textIntro>img {
+  #textIntro > img {
     width: 300px !important;
   }
 
-  #skills {
+  #Skills_and_Capabilities {
+    margin-top: 100px;
+    grid-template-columns: 100% !important;
+    grid-template-rows: repeat(4, auto) !important;
+  }
+
+  #Habilidades_y_Capacidades {
     margin-top: 100px;
     grid-template-columns: 100% !important;
     grid-template-rows: repeat(4, auto) !important;
@@ -207,19 +215,19 @@ body {
     flex-direction: column-reverse;
   }
 
-  .certificadoComponent > img {
+  .certificadoComponent  >  img {
     width: 75% !important;
     margin-top: 25px;
   }
 
-  .certificadoComponent > div {
+  .certificadoComponent  >  div {
     width: 90% !important;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .certificadoComponent > div > ul {
+  .certificadoComponent  >  div  >  ul {
     width: 75% !important;
   }
 }
@@ -235,28 +243,28 @@ body {
 }
 
 @media (max-width: 750px) {
-  #footer {
+  #footer > div:last-child {
     flex-direction: column !important;
   }
 
-  #footer>div {
+  #footer > div:last-child > div {
     width: 95% !important;
     border-right: none !important;
   }
 
-  #footer>div:first-child {
+  #footer > div:last-child > div:first-child {
     border-bottom: 5px solid #69BE28;
   }
 
-  #footer>div:first-child>h3 {
+  #footer > div:last-child > h3 {
     margin-left: 0 !important;
   }
 
-  #formContacto > div {
+  #formContacto  >  div {
     flex-direction: column;
   }
 
-  #formContacto > div > div {
+  #formContacto  >  div  >  div {
     width: 90% !important;
   }
 
@@ -275,11 +283,11 @@ body {
     left: 20px !important;
   }
 
-  #skills {
+  #Habilidades_y_Capacidades {
     width: 90% !important;
   }
 
-  #someCertificatesContainer>img {
+  #someCertificatesContainer > img {
     width: 90% !important;
     height: auto !important;
   }

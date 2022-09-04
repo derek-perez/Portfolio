@@ -1,11 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 export const Navbar = () => {
 
+    const [lng, setLng] = useState('');
 
     useEffect(() => {
+        const currentPage = window.location.pathname;
+        currentPage.includes('/es/') ? setLng('es') : setLng('en');
+
         const iconNavbarResponsive = document.getElementById('iconNavbarResponsive');
         const listener = () => {
             document.getElementById('navbarResponsive')!.style.display = 'flex';
@@ -21,23 +25,33 @@ export const Navbar = () => {
 
     return (
         <div id='navbar' style={styles.container}>
-            <img
-                src='https://dewey.tailorbrands.com/production/brand_version_mockup_image/872/7596161872_9e1bc302-a4d5-4889-8da9-f5fa4e6ac5d9.png?cb=1657994260'
-                style={styles.img}
-            />
+            <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'}>
+                <img
+                    src='https://dewey.tailorbrands.com/production/brand_version_mockup_image/872/7596161872_9e1bc302-a4d5-4889-8da9-f5fa4e6ac5d9.png?cb=1657994260'
+                    style={styles.img}
+                />
+            </Link>
 
             <div id='linksNavbar' style={{ marginTop: '40px' }}>
-                <Link to='/#intro' className='links' style={styles.link}>
-                    Inicio
+                <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'} className='links' style={styles.link}>
+                    {
+                        lng === 'es' ? 'Inicio' : 'Home'
+                    }
                 </Link>
-                <Link to='/proyectos#intro' className='links' style={styles.link}>
-                    Projectos
+                <Link to={lng === 'es' ? '/es/proyectos/#Introducción' : '/en/projects/#Introduction'} className='links' style={styles.link}>
+                    {
+                        lng === 'es' ? 'Proyectos' : 'Projects'
+                    }
                 </Link>
-                <Link to='/certificados#intro' className='links' style={styles.link}>
-                    Certificados
+                <Link to={lng === 'es' ? '/es/certificados/#Introducción' : '/en/certificates/#Introduction'} className='links' style={styles.link}>
+                    {
+                        lng === 'es' ? 'Certificados' : 'Certificates'
+                    }
                 </Link>
-                <Link to='/contacto' className='links' style={styles.link}>
-                    Contacto
+                <Link to={lng === 'es' ? '/es/contacto/' : '/en/contact/'} className='links' style={styles.link}>
+                    {
+                        lng === 'es' ? 'Contacto' : 'Contact'
+                    }
                 </Link>
             </div>
 

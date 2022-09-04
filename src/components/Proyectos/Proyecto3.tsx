@@ -28,7 +28,7 @@ export const Proyecto3 = () => {
 
 
   return (
-    <div id='NasaDex' className="section" style={styles.container}>
+    <div id='Desarrollo_Móvil NasaDex' className="section" style={styles.container}>
       <h1 style={{
         color: '#69BE28',
         borderBottom: '2px solid #69BE28',
@@ -103,7 +103,7 @@ export const Proyecto3 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '50px',
+    marginTop: '150px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'

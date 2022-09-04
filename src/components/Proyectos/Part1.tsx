@@ -4,7 +4,7 @@ import { NavbarResponsive } from "../Navbars/NavbarResponsive"
 
 export const Part1 = () => {
     return (
-        <div id="intro" className="section" style={styles.container}>
+        <div id="Introducción" className="section" style={styles.container}>
             <Navbar />
             <NavbarResponsive />
 
@@ -15,13 +15,18 @@ export const Part1 = () => {
 
                 <p style={{ width: '80%', lineHeight: '1.3' }}>
                     Estos son algunos de mis proyectos más relevantes en cuanto al <b>Desarrollo Web y Móvil</b>, porque he hecho más, pero,
-                    o usaban como Backend <b>PHP </b> (y estos no los presento porque ya no uso PHP, he migrado a NodeJs) o eran parte de algún curso
-                    y eran para practicar y aprender. Por eso es que he decidido no mostrarlos.
+                    o usaban como Backend <b>PHP</b> (y estos no los presento porque ya no uso PHP, he migrado a NodeJs) o eran parte de algún curso
+                    con el objetivo de practicar y aprender. Por eso es que he decidido no mostrarlos.
                     <br />
                     <br />
                     Y algo importante que destacar, es que estos proyectos, los he hecho yo solo
                     desde absolutamente <b>cero</b>. Todos los proyectos tienen como backend <b>NodeJs</b>. 
                     Y en cuanto a <b>Diseño UI/UX</b> si son todos los que hecho, y aquí te los muestro.
+                    <br />
+                    <br />
+                    Ahora bien, los modelos de inteligencia artificial que te presentaré, son modelos para distintas tareas del <b>Deep Learning</b>.
+                    No son todos los modelos que hize, sino que son los más relevantes y los que resuelven tareas "relativamente" más complejas que los
+                    otros modelos que desarrollé.
                     <br />
                     <br />
                     Te iré presentando los proyectos de forma cronológica en sus categorías correspondientes...

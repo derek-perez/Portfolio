@@ -14,25 +14,31 @@ export const useShow = ({ p, button, width }: Props) => {
     useEffect(() => {
         const pInfo = document.getElementById(p);
         const pButton = document.getElementById(button);
-
-        if (window.innerWidth <= width) {
-            pButton!.style.display = 'block';
-        }
-
-        const listener = () => {
-            pInfo!.classList.toggle('textHidden');
-
-            if (clicked.current) {
-                pButton!.innerHTML = 'Ver más +'
-                clicked.current = false
-            } else {
-                pButton!.innerHTML = 'Ver menos -'
-                clicked.current = true
+        
+        return () => {
+            if (window.innerWidth <= width) {
+                pButton!.style.display = 'block';
             }
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth <= width) {
+                    pButton!.style.display = 'block';
+                } else if (window.innerWidth > width) {
+                    pButton!.style.display = 'none';
+                }
+            })
+    
+            pButton!.addEventListener('click', () => {
+                pInfo!.classList.toggle('textHidden');
+    
+                if (clicked.current) {
+                    pButton!.innerHTML = 'Ver más +'
+                    clicked.current = false
+                } else {
+                    pButton!.innerHTML = 'Ver menos -'
+                    clicked.current = true
+                }
+            })
         }
-
-        pButton!.addEventListener('click', listener)
-
-        return () => pButton!.removeEventListener('click', listener)
     }, [])
 }

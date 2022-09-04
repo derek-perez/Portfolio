@@ -67,7 +67,7 @@ export const ContactoScreen = () => {
       <NavbarResponsive />
 
       <h2 style={{ textAlign: 'center' }}>
-        Solo, rellena este formulario para contactarme y poder charlar
+        Solo rellena este formulario para contactarme y poder charlar
       </h2>
 
       <form id="formContacto" onSubmit={handleSubmit} style={styles.form}>
@@ -87,15 +87,15 @@ export const ContactoScreen = () => {
             </div>
             <div style={styles.divInput}>
               <label htmlFor="presupuesto" style={styles.label}>
-                <i className="fa fa-money"></i> &nbsp; Presupuesto:
+                <i className="fa fa-money"></i> &nbsp; Presupuesto: (MXN)
               </label>
               <select id='presupuesto' name='presupuesto' className="inputContainer" style={styles.input} required>
-                <option defaultValue='Presupuesto'>Escoje tu presupuesto</option>
+                <option defaultValue='Presupuesto'>Escoje tu presupuesto (MXN)</option>
                 <option value='-2500'>-$2500</option>
-                <option value='5-10'>-$5000 - $10,000</option>
-                <option value='10-25'>-$10,000 - $25,000</option>
-                <option value='25-50'>-$25,000 - $50,000</option>
-                <option value='+50'>-+$50,000</option>
+                <option value='5-10'>$5000 - $10,000</option>
+                <option value='10-25'>$10,000 - $25,000</option>
+                <option value='25-50'>$25,000 - $50,000</option>
+                <option value='+50'>+$50,000</option>
               </select>
             </div>
             <div style={styles.divInput}>
@@ -121,7 +121,7 @@ export const ContactoScreen = () => {
                 <option defaultValue='proyecto'>Tipo de proyecto</option>
                 <option value='sitio_web'>Sitio Web o Aplicación Web</option>
                 <option value='aplicacion_movil'>Aplicación Móvil</option>
-                <option value='web_movil'>Aplicación Web & Móvil</option>
+                <option value='web_movil'>Aplicación Web y Móvil</option>
                 <option value='ia'>Proyecto de Inteligencia artificial</option>
               </select>
             </div>

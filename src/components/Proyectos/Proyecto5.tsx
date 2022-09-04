@@ -33,7 +33,7 @@ export const Proyecto5 = () => {
 
 
   return (
-    <div id='Habitual' className="section" style={styles.container}>
+    <div id='UI_UX Habitual' className="section" style={styles.container}>
       <h1 style={{
         color: '#69BE28',
         borderBottom: '2px solid #69BE28',
@@ -57,7 +57,7 @@ export const Proyecto5 = () => {
         alignItems: 'center'
       }}>
         <p id='infoHabitual' className="textHidden" style={styles.infoProyect}>
-          Esta es el primer proyecto que diseñé desde un boceto, hasta el diseño de alta fidelidad. Se trata de una aplicación que funciona como Amazon o
+          Este es el primer proyecto que diseñé desde un boceto, hasta el diseño de alta fidelidad. Se trata de una aplicación que funciona como Amazon o
           MercadoLibre donde está una página principal, una lista de deseos, un buscador y un carrito. Lo diseñé con ayuda de <b>Figma</b>, donde hay un
           propotipo...
         </p>
@@ -103,7 +103,7 @@ export const Proyecto5 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '50px',
+    marginTop: '150px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'

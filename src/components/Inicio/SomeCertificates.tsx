@@ -21,12 +21,12 @@ export const SomeCertificates = ({ which }: { which: number }) => {
         `<li class='listItem'>utilizar Redux</li>
             <li class='listItem'>utilizar Firebase</li>
             <li class='listItem'>utilizar el Context API</li>
-            <li class='listItem'>uso y desarrollo de hooks</li>
+            <li class='listItem'>usar y desarrollar hooks</li>
             <li class='listItem'>utilizar <b>React Router Dom</b></li>
             <li class='listItem'>implementar autenticación con Google y JWTs</li>
             <li class='listItem'>desarrollar sitios web usando la pila MERN</li>`,
         `<li class='listItem'>dominar los principios de diseño web y móvil para UI/UX</li>
-            <li class='listItem'>utilizar técnicas para trabajar en equipo y liderear algún proyecto</li>
+            <li class='listItem'>utilizar técnicas para trabajar en equipo y liderar algún proyecto</li>
             <li class='listItem'>pasar de bocetos a "Wireframes" y después a diseños de alta fidelidad</li>
             <li class='listItem'>utilizar las mejores prácticas de UI/UX que son tendencia en la industria</li>
             <li class='listItem'>diseñar logotipos profesionales y opciones de diseño para cualquier marca</li>

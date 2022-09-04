@@ -16,7 +16,7 @@ export const Part3 = () => {
 
 
     return (
-        <div id='someProjects' className="section" style={styles.container}>
+        <div id='Algunos_proyectos' className="section" style={styles.container}>
             <h2 style={{ textAlign: 'center', width: '80%' }}>
                 Mira, te voy a enseñar algunos de mis proyectos para que más o menos
                 te des una idea del porqué digo que soy un Desarrollador de Software
@@ -73,7 +73,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column' as 'column',
         alignItems: 'center',
-        marginTop: '50px',
+        marginTop: '150px',
         paddingTop: '25px'
     },
 

@@ -28,7 +28,7 @@ export const Proyecto4 = () => {
 
 
   return (
-    <div id='Pizzacode_Movil' className="section" style={styles.container}>
+    <div id='Desarrollo_Móvil Pizzacode_Movil' className="section" style={styles.container}>
       <p style={styles.title}>
         Proyecto #4: <b>Pizzacode Móvil</b>
       </p>
@@ -48,8 +48,8 @@ export const Proyecto4 = () => {
       }}>
         <p id='infoPizzacodeMovil' className="textHidden" style={styles.infoProyect}>
           También desarrollé la aplicación móvil para <b>Pizzacode</b> desde cero (actualmente solo para Android). Esta está desarrollada utilizando
-          el <b>CLI</b> de <b>React Native</b> (no uso Expo). Utilizé el mismo Backend, los mismos Hooks y algunos <b>Contexts</b> que utilizé para
-          el sitio web. La ventaja de utilizar React para desarrollar aplicación web y móvil, es que practicamente, puedes utilizar casi el mismo
+          el <b>CLI</b> de <b>React Native</b> (no uso Expo). Utilizé el mismo Backend, los mismos hooks y algunos <b>Contexts</b> que utilizé para
+          el sitio web. La ventaja de utilizar React para desarrollar aplicación web y móvil, es que practicamente, puedes utilizar casi todo el mismo
           código para las dos aplicaciones, así que te ahorras mucho tiempo, recursos y código para desarrollar ambas aplicaciones.
         </p>
         <div id='infoPizzacodeMovilButton' style={styles.infoButton}>Ver más +</div>
@@ -108,7 +108,7 @@ export const Proyecto4 = () => {
 const styles = {
   container: {
     width: '95%',
-    marginTop: '50px',
+    marginTop: '150px',
     display: 'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'center'
