@@ -4,7 +4,7 @@ import { useScroll } from "../../hooks/useScroll";
 import * as data from '../../dataCertificadosEN.json';
 import { Part1EN, CertificadoComponentEN } from "../../components/Certificados/";
 
-import { Footer } from "../../components/Footer";
+import { FooterEN } from "../../components/FooterEN";
 
 export const CertificatesScreen = () => {
 
@@ -40,7 +40,7 @@ export const CertificatesScreen = () => {
         })
       }
 
-      <Footer />
+      <FooterEN />
     </div>
   )
 }

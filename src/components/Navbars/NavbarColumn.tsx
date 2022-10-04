@@ -31,7 +31,7 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                 document.getElementById(`${lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}`)!.scrollIntoView({ behavior: 'smooth' })
                 break;
 
-            // Projects & Certificates Page
+            // Projects Page
             case `${lng.includes('es') ? 'Introducción' : 'Introduction'}`:
                 document.getElementById(`${lng.includes('es') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: "smooth" });
                 break;
@@ -46,6 +46,30 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                 break;
             case 'AI':
                 document.getElementById('AI Food101')!.scrollIntoView({ behavior: "smooth" });
+                break;
+        }
+    }
+
+    const handleClickCertificates = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        let div = e.target as HTMLElement;
+        let title = div.title
+        
+        // Certificates Page
+        switch (title) {
+            case `${lng.includes('/es/') ? 'Introducción' : 'Introduction'}`:
+                document.getElementById(`${lng.includes('/es/') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case `${lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}`:
+                document.getElementById(`${lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}`)!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case `${lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'}`:
+                document.getElementById(`${lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'} React_Native`)!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case 'UI_UX':
+                document.getElementById('UI_UX')!.scrollIntoView({ behavior: "smooth" });
+                break;
+            case 'AI':
+                document.getElementById('AI')!.scrollIntoView({ behavior: "smooth" });
                 break;
         }
     }
@@ -120,27 +144,27 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
             <div id='navbarColumn' style={styles.container}>
                 <div style={styles.content}>
                     <div
-                        onClick={handleClick}
+                        onClick={handleClickCertificates}
                         title={lng.includes('/es/') ? 'Introducción' : 'Introduction'}
                         className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
-                        onClick={handleClick}
+                        onClick={handleClickCertificates}
                         title={lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}
                         className={`columnNavLinks ${(lng.includes('/es/') ? hash.includes('Desarrollo_Web') : hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
-                        onClick={handleClick}
+                        onClick={handleClickCertificates}
                         title={lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'}
                         className={`columnNavLinks ${(lng.includes('/es/') ? hash.includes('Desarrollo_Móvil') : hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
-                        onClick={handleClick}
+                        onClick={handleClickCertificates}
                         title='UI_UX'
                         className={`columnNavLinks ${hash.includes('UI_UX') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
-                        onClick={handleClick}
+                        onClick={handleClickCertificates}
                         title='AI'
                         className={`columnNavLinks ${hash.includes('AI') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>

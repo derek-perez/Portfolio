@@ -9,7 +9,6 @@ interface Props {
 
 export const CertificadoComponent = ({ id, whatIs, img, list }: Props) => {
 
-
     useEffect(() => {
         const listHTML = document.getElementById(`list${id}`);
         if (!listHTML) return;
@@ -32,9 +31,31 @@ export const CertificadoComponent = ({ id, whatIs, img, list }: Props) => {
                 <div style={{
                     width: '50%'
                 }}>
-                    <h2>En este curso sobre {whatIs}, aprendí a:</h2>
-
-                    <ul id={`list${id}`} className='listCertificate' style={{ padding: 0, width: '90%' }}></ul>
+                    {
+                        whatIs !== 'Python' && (
+                            <>
+                                <h2>En este curso sobre {whatIs}, aprendí a:</h2>
+                                <ul id={`list${id}`} className='listCertificate' style={{ padding: 0, width: '90%' }}></ul>
+                            </>
+                        )
+                    }
+                    {
+                        whatIs === 'Python' && (
+                            <>
+                                <h2>Tomé este curso de Python para reforzar conocimientos:</h2>
+                                <ul>
+                                    <li className='listItem'>definir funciones, listas/objetos de comprehensión</li>
+                                    <li className='listItem'>POO (Programación Orientada a Objetos)</li>
+                                    <li className='listItem'>etc...</li>
+                                </ul>
+                                <span style={styles.span}>
+                                    En el curso se incluían temas como: videojuegos, desarrollo web con Flask y las bases para usar Pandas, Matplotlib y NumPy.
+                                    Ahora bien, en el curso de Tensorflow, el instructor enseño muy bien y de forma más avanzada, a utilizar los paquetes antes mecionados.
+                                    Y cómo lo que yo quería no era aprender a hacer videojuegos o aprender a utilizar de forma básica Flask, tuve que saltar varias secciones.
+                                </span>
+                            </>
+                        )
+                    }
                 </div>
             </div>
         </div>
@@ -62,5 +83,9 @@ const styles = {
     },
     img: {
         width: '40%',
+    },
+    span: {
+        lineHeight: '1.3',
+        fontSize: '17px'
     }
 }

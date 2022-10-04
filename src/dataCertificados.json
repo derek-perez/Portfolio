@@ -58,5 +58,11 @@
         "whatIs": "Deep Learning",
         "img": "https://res.cloudinary.com/chugus/image/upload/v1662064059/UC-c57978a4-a118-46d0-beb7-ae254bb19512.pdf_y7dtgs.png",
         "list": "<li class='listItem'>crear algoritmos de reconocimiento de imágenes, detección de objetos y reconocimiento de texto con redes neuronales profundas y redes neuronales convolucionales</li> <li class='listItem'>aplicar el aprendizaje profundo para la previsión de series temporales</li> <li class='listItem'>crear todo tipo de modelos de aprendizaje automático con el último TensorFlow 2</li> <li class='listItem'>obtener las habilidades que necesito para convertirme en un desarrollador certificado de TensorFlow</li>"
+    },
+    "certificado11": {
+        "id": "AI Python",
+        "whatIs": "Python",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1664899770/grid_preview_ygeubc_hdfwpc.jpg",
+        "list": ""
     }
 }

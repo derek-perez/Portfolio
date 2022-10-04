@@ -58,5 +58,11 @@
         "whatIs": "Deep Learning",
         "img": "https://res.cloudinary.com/chugus/image/upload/v1662064059/UC-c57978a4-a118-46d0-beb7-ae254bb19512.pdf_y7dtgs.png",
         "list": "<li class='listItem'>build image recognition, object detection, and text recognition algorithms with deep neural networks and convolutional neural networks</li> <li class='listItem'>apply deep learning for time series forecasting</li> <li class='listItem'>create all kinds of machine learning models with the latest TensorFlow 2</li> <li class='listItem'>gain the skills I need to become a certified TensorFlow developer</li>"
+    },
+    "certificado11": {
+        "id": "AI Python",
+        "whatIs": "Python",
+        "img": "https://res.cloudinary.com/chugus/image/upload/v1664899770/grid_preview_ygeubc_hdfwpc.jpg",
+        "list": ""
     }
 }
