@@ -7,4 +7,3 @@ export { Proyecto5 } from "./Proyecto5";
 export { Proyecto6 } from "./Proyecto6";
 export { Proyecto7 } from "./Proyecto7";
 export { Proyecto8 } from "./Proyecto8";
-export { Proyecto9 } from "./Proyecto9";

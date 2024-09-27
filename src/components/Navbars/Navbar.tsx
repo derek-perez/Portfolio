@@ -25,7 +25,7 @@ export const Navbar = () => {
 
     return (
         <div id='navbar' style={styles.container}>
-            <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'}>
+            <Link to='/#Introduction'>
                 <img
                     src='https://dewey.tailorbrands.com/production/brand_version_mockup_image/872/7596161872_9e1bc302-a4d5-4889-8da9-f5fa4e6ac5d9.png?cb=1657994260'
                     style={styles.img}
@@ -33,26 +33,10 @@ export const Navbar = () => {
             </Link>
 
             <div id='linksNavbar' style={{ marginTop: '40px' }}>
-                <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'} className='links' style={styles.link}>
-                    {
-                        lng === 'es' ? 'Inicio' : 'Home'
-                    }
-                </Link>
-                <Link to={lng === 'es' ? '/es/proyectos/#Introducción' : '/en/projects/#Introduction'} className='links' style={styles.link}>
-                    {
-                        lng === 'es' ? 'Proyectos' : 'Projects'
-                    }
-                </Link>
-                <Link to={lng === 'es' ? '/es/certificados/#Introducción' : '/en/certificates/#Introduction'} className='links' style={styles.link}>
-                    {
-                        lng === 'es' ? 'Certificados' : 'Certificates'
-                    }
-                </Link>
-                <Link to={lng === 'es' ? '/es/contacto/' : '/en/contact/'} className='links' style={styles.link}>
-                    {
-                        lng === 'es' ? 'Contacto' : 'Contact'
-                    }
-                </Link>
+                <Link to='/#Introduction' className='links' style={styles.link}>Home</Link>
+                <Link to='projects/#Introduction' className='links' style={styles.link}>Projects</Link>
+                <Link to='/certificates/#Introduction' className='links' style={styles.link}>Certificates</Link>
+                <Link to='/contact/' className='links' style={styles.link}>Contact</Link>
             </div>
 
             <div style={{ display: 'none' }} id='iconNavbarResponsive'>

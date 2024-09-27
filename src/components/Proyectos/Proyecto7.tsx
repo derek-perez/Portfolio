@@ -1,72 +1,68 @@
-import { useShow } from "../../hooks/useShow";
-
 
 export const Proyecto7 = () => {
 
-    useShow({
-        p: 'infoFood101',
-        button: 'infoFood101Button',
-        width: 1384
-    })
+    const handleClick = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+        const img = e.target as HTMLImageElement;
+
+        const modalImageCarousel = document.getElementById('modalImageCarousel') as HTMLElement;
+        const modalImageCarousel_img = document.querySelector('#modalImageCarousel > div > img') as HTMLImageElement;
+        const modalImageCarousel_alt = document.querySelector('#modalImageCarousel > div > p') as HTMLElement;
+
+        document.querySelector('body')!.style.overflow = 'hidden';
+        modalImageCarousel.style.display = 'block';
+
+        modalImageCarousel_img.src = img.src;
+        modalImageCarousel_img.style.maxHeight = 'auto';
+        modalImageCarousel_img.style.width = '90%';
+
+        if (img.classList.contains('verticalImg')) {
+            modalImageCarousel_img.style.maxHeight = '412px';
+            modalImageCarousel_img.style.width = 'auto';
+        }
+
+        modalImageCarousel_alt.innerHTML = img.alt;
+    }
 
 
     return (
-        <div id='AI Food101' className="section" style={styles.container}>
-            <h1 style={{
-                color: '#69BE28',
-                borderBottom: '2px solid #69BE28',
-                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.9)'
-            }}
-            >
-                Deep Learning
-            </h1>
-
+        <div id='UI_UX Portfolio' className="section" style={styles.container}>
             <p style={styles.title}>
-                Proyecto #7: <b>Food101</b>
+                Project #7: <b>This portfolio</b> - 2022
             </p>
-
-            <b style={{ margin: '20px 0', width: '80%', textAlign: 'center', overflow: 'hidden' }}>
-                Notebook (o Cuaderno) de Google Colab: &nbsp;
-                <a
-                    href='https://colab.research.google.com/drive/1LJ6z3JleUMs9Sg8XNWt8n4yyLxHZ5ZMl?usp=sharing'
-                    style={{ color: 'white', fontWeight: '400' }}
-                >
-                    https://colab.research.google.com/drive/1LJ6z3JleUMs9Sg8XNWt8n4yyLxHZ5ZMl?usp=sharing
-                </a>
-            </b>
 
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center'
             }}>
-                <p id='infoFood101' className="textHidden" style={styles.infoProyect}>
-                    <b>Food101</b> es un proyecto que está hecho para <b>Visión Artificial</b>, tiene un modelo de inteligencia artificial que
-                    utiliza <b>Redes Neuronales Convolucionales (CNN)</b> y fue entrenado utilizando el conjunto de datos (o Dataset) llamado
-                    <a style={{ color: 'white' }} href="https://www.tensorflow.org/datasets/catalog/food101?hl=en"> Food 101</a>.
-                    Este conjunto de datos consta de 101 categorías de alimentos, con 101,000 imágenes. Para cada clase, se proporcionan 250 imágenes de
-                    prueba revisadas manualmente, así como 750 imágenes de entrenamiento. A propósito, las imágenes de entrenamiento no se limpiaron y,
-                    por lo tanto, aún contienen cierta cantidad de "ruido". Esto viene principalmente en forma de colores intensos y, a veces, etiquetas incorrectas.
-                    Todas las imágenes se redimensionaron para tener una longitud lateral máxima de 512 píxeles.
+                <p id='infoPortafolio' className="textHidden" style={styles.infoProyect}>
+                    As you can see, this portfolio that you are seeing right now, I designed it. I designed it from scratch, starting from the sketches, to the "Wireframes",
+                    to high-fidelity design. Do you want to see it? Look down...
                 </p>
-                <div id='infoFood101Button' style={styles.infoButton}>Ver más +</div>
             </div>
 
-            <div style={{
-                width: '90%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <h3 style={{ marginTop: '50px', textAlign: 'center' }}>
-                    El siguiente video video demuestra más o menos como funciona el modelo en acción &nbsp;
-                    <span style={{fontSize: '16px'}}>(yo no hice la aplicación que aparece en el video)</span>:
-                </h3>
-                <video style={{ width: '75%', maxHeight:'465px' }} poster="https://res.cloudinary.com/chugus/image/upload/v1661981908/food101-2.0.0_rwg9aq.png" controls>
-                    <source src='https://res.cloudinary.com/chugus/video/upload/v1661895927/Demo_Food_Recognizer101_cnhp25.mp4' type='video/mp4' />
-                    Tu navegador no soporta videos
-                </video>
+            <div id='carouselPortafolio' className="carouselProyects" style={styles.carousel}>
+                <img
+                    style={styles.img}
+                    onClick={handleClick}
+                    className='imgCarousel verticalImg'
+                    alt='In this sketch you can see the user flow if you press the "Certificates" item in the menu.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658705392/Captura_de_pantalla_2022-07-24_182823_bmfmsb.jpg'
+                />
+                <img
+                    style={styles.img}
+                    onClick={handleClick}
+                    className='imgCarousel'
+                    alt='Now, this is the "Wireframe" of the user flow that you see in the previous image.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658705392/Captura_de_pantalla_2022-07-24_182917_mqolyl.jpg'
+                />
+                <img
+                    style={styles.img}
+                    onClick={handleClick}
+                    className='imgCarousel verticalImg'
+                    alt='Lastly, this is the high-fidelity design of the user flow from the previous images. Now yes, with luxury of details.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658705393/To_Certificates_From_HS_kvtroz.svg'
+                />
             </div>
         </div>
     )
@@ -78,6 +74,7 @@ const styles = {
     container: {
         width: '95%',
         marginTop: '150px',
+        minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column' as 'column',
         alignItems: 'center'

@@ -9,23 +9,22 @@ export const Part3 = () => {
     const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         const button = e.target as HTMLButtonElement;
 
-        if (button.title === 'Blogi') setWhich(0);
+        if (button.title === 'ChatCTS') setWhich(0);
         if (button.title === 'Pizzacode Web') setWhich(1);
-        if (button.title === 'Pizzacode Móvil') setWhich(2);
+        if (button.title === 'Blogi') setWhich(2);
     }
 
 
     return (
-        <div id='Algunos_proyectos' className="section" style={styles.container}>
+        <div id='Some_projects' className="section" style={styles.container}>
             <h2 style={{ textAlign: 'center', width: '80%' }}>
-                Mira, te voy a enseñar algunos de mis proyectos para que más o menos
-                te des una idea del porqué digo que soy un Desarrollador de Software
+                Look, I'm going to show you some of my projects so you can get an idea of why I say I'm a Software Developer
             </h2>
 
             <div id='preview_projects' style={styles.previewProjects}>
                 <div id='buttonsProjectContainer' style={styles.buttonsGroup}>
                     <button
-                        title='Blogi'
+                        title='ChatCTS'
                         onClick={handleClick}
                         className='buttonProject'
                         style={{
@@ -33,7 +32,7 @@ export const Part3 = () => {
                             transition: '0.5s'
                         }}
                     >
-                        Blogi
+                        ChatCTS
                     </button>
                     <button
                         title='Pizzacode Web'
@@ -47,7 +46,7 @@ export const Part3 = () => {
                         Pizzacode Web
                     </button>
                     <button
-                        title='Pizzacode Móvil'
+                        title='Blogi'
                         onClick={handleClick}
                         className='buttonProject'
                         style={{
@@ -55,7 +54,7 @@ export const Part3 = () => {
                             transition: '0.5s'
                         }}
                     >
-                        Pizzacode Móvil
+                        Blogi
                     </button>
                 </div>
 

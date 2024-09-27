@@ -4,7 +4,7 @@ import { NavbarColumn } from "../components/Navbars/NavbarColumn"
 import { useScroll } from "../hooks/useScroll"
 
 
-export const InicioScreen = () => {
+export const HomeScreen = () => {
 
   useScroll();
 

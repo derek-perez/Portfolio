@@ -3,10 +3,9 @@
 export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
 
     let hash = window.location.hash;
-    const lng = window.location.pathname;
 
     if (hash === '') {
-        hash = `${lng.includes('es') ? '#Introducción' : '#Introduction'}`
+        hash = '#Introduction'
     }
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -15,37 +14,34 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
 
         switch (title) {
             // Home Page
-            case `${lng.includes('es') ? 'Introducción' : 'Introduction'}`:
-                document.getElementById(`${lng.includes('es') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: 'smooth' })
+            case 'Introduction':
+                document.getElementById('Introduction')!.scrollIntoView({ behavior: 'smooth' })
                 break;
-            case `${lng.includes('es') ? 'Habilidades_y_Capacidades' : 'Skills_and_Capabilities'}`:
-                document.getElementById(`${lng.includes('es') ? 'Habilidades_y_Capacidades' : 'Skills_and_Capabilities'}`)!.scrollIntoView({ behavior: 'smooth' })
+            case 'Skills_and_Capabilities':
+                document.getElementById('Skills_and_Capabilities')!.scrollIntoView({ behavior: 'smooth' })
                 break;
-            case `${lng.includes('es') ? 'Algunos_proyectos' : 'Some_projects'}`:
-                document.getElementById(`${lng.includes('es') ? 'Algunos_proyectos' : 'Some_projects'}`)!.scrollIntoView({ behavior: 'smooth' })
+            case 'Some_projects':
+                document.getElementById('Some_projects')!.scrollIntoView({ behavior: 'smooth' })
                 break;
-            case `${lng.includes('es') ? 'Algunos_certificados' : 'Some_certificates'}`:
-                document.getElementById(`${lng.includes('es') ? 'Algunos_certificados' : 'Some_certificates'}`)!.scrollIntoView({ behavior: 'smooth' })
+            case 'Some_certificates':
+                document.getElementById('Some_certificates')!.scrollIntoView({ behavior: 'smooth' })
                 break;
-            case `${lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}`:
-                document.getElementById(`${lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}`)!.scrollIntoView({ behavior: 'smooth' })
+            case 'CV_and_Contact':
+                document.getElementById('CV_and_Contact')!.scrollIntoView({ behavior: 'smooth' })
                 break;
 
             // Projects Page
-            case `${lng.includes('es') ? 'Introducción' : 'Introduction'}`:
-                document.getElementById(`${lng.includes('es') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: "smooth" });
+            case 'Introduction':
+                document.getElementById('Introduction')!.scrollIntoView({ behavior: "smooth" });
                 break;
-            case `${lng.includes('es') ? 'Desarrollo_Web' : 'Web_Development'}`:
-                document.getElementById(`${lng.includes('es') ? 'Desarrollo_Web' : 'Web_Development'} Blogi`)!.scrollIntoView({ behavior: "smooth" });
+            case 'Web_Development':
+                document.getElementById(`Web_Development Blogi`)!.scrollIntoView({ behavior: "smooth" });
                 break;
-            case `${lng.includes('es') ? 'Desarrollo_Móvil' : 'Mobile_Development'}`:
-                document.getElementById(`${lng.includes('es') ? 'Desarrollo_Móvil' : 'Mobile_Development'} NasaDex`)!.scrollIntoView({ behavior: "smooth" });
+            case 'Mobile_Development':
+                document.getElementById(`Mobile_Development NasaDex`)!.scrollIntoView({ behavior: "smooth" });
                 break;
             case 'UI_UX':
                 document.getElementById('UI_UX Habitual')!.scrollIntoView({ behavior: "smooth" });
-                break;
-            case 'AI':
-                document.getElementById('AI Food101')!.scrollIntoView({ behavior: "smooth" });
                 break;
         }
     }
@@ -56,20 +52,17 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
         
         // Certificates Page
         switch (title) {
-            case `${lng.includes('/es/') ? 'Introducción' : 'Introduction'}`:
-                document.getElementById(`${lng.includes('/es/') ? 'Introducción' : 'Introduction'}`)!.scrollIntoView({ behavior: "smooth" });
+            case 'Introduction':
+                document.getElementById('Introduction')!.scrollIntoView({ behavior: "smooth" });
                 break;
-            case `${lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}`:
-                document.getElementById(`${lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}`)!.scrollIntoView({ behavior: "smooth" });
+            case 'Web_Development':
+                document.getElementById('Web_Development')!.scrollIntoView({ behavior: "smooth" });
                 break;
-            case `${lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'}`:
-                document.getElementById(`${lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'} React_Native`)!.scrollIntoView({ behavior: "smooth" });
+            case 'Mobile_Development':
+                document.getElementById(`Mobile_Development`)!.scrollIntoView({ behavior: "smooth" });
                 break;
             case 'UI_UX':
                 document.getElementById('UI_UX')!.scrollIntoView({ behavior: "smooth" });
-                break;
-            case 'AI':
-                document.getElementById('AI')!.scrollIntoView({ behavior: "smooth" });
                 break;
         }
     }
@@ -81,27 +74,27 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                 <div style={styles.content}>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Introducción' : 'Introduction'}
-                        className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'} `}
+                        title='Introduction'
+                        className={`columnNavLinks ${(hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></div>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Habilidades_y_Capacidades' : 'Skills_and_Capabilities'}
+                        title='Skills_and_Capabilities'
                         className={`columnNavLinks ${hash === '#skills' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></div>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Algunos_proyectos' : 'Some_projects'}
+                        title='Some_projects'
                         className={`columnNavLinks ${hash === '#someProjects' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></div>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Algunos_certificados' : 'Some_certificates'}
+                        title='Some_certificates'
                         className={`columnNavLinks ${hash === '#someCertificates' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></div>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'CV_y_Contacto' : "CV_and_Contact"}
+                        title='CV_and_Contact'
                         className={`columnNavLinks ${hash === '#linkContact' ? 'activeNavColumn' : 'inactiveNavColumn'} `}
                     ></div>
                 </div>
@@ -113,28 +106,23 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                 <div style={styles.content}>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Introducción' : 'Introduction'}
-                        className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                        title='Introduction'
+                        className={`columnNavLinks ${(hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Desarrollo_Web' : 'Web_Development'}
-                        className={`columnNavLinks ${(lng.includes('es') ? hash.includes('Desarrollo_Web') : hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                        title='Web_Development'
+                        className={`columnNavLinks ${(hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
                         onClick={handleClick}
-                        title={lng.includes('es') ? 'Desarrollo_Móvil' : 'Mobile_Development'}
-                        className={`columnNavLinks ${(lng.includes('es') ? hash.includes('Desarrollo_Móvil') : hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                        title='Mobile_Development'
+                        className={`columnNavLinks ${(hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
                         onClick={handleClick}
                         title='UI_UX'
                         className={`columnNavLinks ${hash.includes('UI_UX') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></div>
-                    <div
-                        onClick={handleClick}
-                        title='AI'
-                        className={`columnNavLinks ${hash.includes('AI') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                 </div>
             </div>
@@ -145,28 +133,23 @@ export const NavbarColumn = ({ whatScreen }: { whatScreen: string }) => {
                 <div style={styles.content}>
                     <div
                         onClick={handleClickCertificates}
-                        title={lng.includes('/es/') ? 'Introducción' : 'Introduction'}
-                        className={`columnNavLinks ${(hash === '#Introducción' || hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                        title='Introduction'
+                        className={`columnNavLinks ${(hash === '#Introduction') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
                         onClick={handleClickCertificates}
-                        title={lng.includes('/es/') ? 'Desarrollo_Web' : 'Web_Development'}
-                        className={`columnNavLinks ${(lng.includes('/es/') ? hash.includes('Desarrollo_Web') : hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                        title='Web_Development'
+                        className={`columnNavLinks ${(hash.includes('Web_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
                         onClick={handleClickCertificates}
-                        title={lng.includes('/es/') ? 'Desarrollo_Móvil' : 'Mobile_Development'}
-                        className={`columnNavLinks ${(lng.includes('/es/') ? hash.includes('Desarrollo_Móvil') : hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
+                        title='Mobile_Development'
+                        className={`columnNavLinks ${(hash.includes('Mobile_Development')) ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                     <div
                         onClick={handleClickCertificates}
                         title='UI_UX'
                         className={`columnNavLinks ${hash.includes('UI_UX') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
-                    ></div>
-                    <div
-                        onClick={handleClickCertificates}
-                        title='AI'
-                        className={`columnNavLinks ${hash.includes('AI') ? 'activeNavColumn' : 'inactiveNavColumn'}`}
                     ></div>
                 </div>
             </div>

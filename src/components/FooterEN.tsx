@@ -20,25 +20,6 @@ export const FooterEN = () => {
 
     return (
         <div id='footer' style={styles.container}>
-            <div id='lngChanger' style={styles.lngChangerDiv}>
-                <span style={styles.lngP}>Change language:</span>
-                <select style={styles.lngB} onChange={handleClick}>
-                    {
-                        lng === 'es' ? (
-                            <>
-                                <option value='es'>Español</option>
-                                <option value='en'>Inglés</option>
-                            </>
-                        ) : (
-                            <>
-                                <option value='en'>English</option>
-                                <option value='es'>Spanish</option>
-                            </>
-                        )
-                    }
-                </select>
-            </div>
-
             <div style={styles.content}>
                 <div style={styles.leftPart}>
                     <img
@@ -61,7 +42,7 @@ export const FooterEN = () => {
                         </div>
                     </div>
                     <div style={styles.infoLeftPart}>
-                        <span>Derek Pérez - Copyright &copy; 2022</span>
+                        <span>Derek Pérez - Software Developer</span>
                     </div>
                 </div>
             </div>

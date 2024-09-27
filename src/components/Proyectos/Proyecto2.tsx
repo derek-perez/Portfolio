@@ -28,9 +28,9 @@ export const Proyecto2 = () => {
 
 
   return (
-    <div id='Desarrollo_Web Pizzacode_Web' className="section" style={styles.container}>
+    <div id='Web_Development Pizzacode_Web' className="section" style={styles.container}>
       <p style={styles.title}>
-        Proyecto #2: <b>Pizzacode Web</b>
+        Project #2: <b>Pizzacode Web</b> - 2022
       </p>
 
       <b style={{ margin: '20px 0', width: '80%', textAlign: 'center' }}>
@@ -38,11 +38,11 @@ export const Proyecto2 = () => {
       </b>
 
       <b style={{ marginBottom: '5px', width: '80%', textAlign: 'center' }}>
-        Código fuente del Backend: <a href="https://github.com/chugus/Pizzacode-Backend.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/Pizzacode-Backend.git</a>
+        Backend source code: <a href="https://github.com/chugus/Pizzacode-Backend.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/Pizzacode-Backend.git</a>
       </b>
 
       <b style={{ marginTop: 0, marginBottom: '20px', width: '80%', textAlign: 'center' }}>
-        Código fuente del Frontend: <a href="https://github.com/chugus/Pizzacode-Frontend.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/Pizzacode-Frontend.git</a>
+        Frontend source code: <a href="https://github.com/chugus/Pizzacode-Frontend.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/Pizzacode-Frontend.git</a>
       </b>
 
       <div style={{
@@ -51,12 +51,12 @@ export const Proyecto2 = () => {
         alignItems: 'center'
       }}>
         <p id='infoPizzacodeWeb' className="textHidden" style={styles.infoProyect}>
-          <b>Pizzacode</b>, fue uno de mis primeros proyectos usando la pila "MERN" (MongoDB, Express, ReactJs, NodeJs). <b>Pizzacode</b> también utiliza
-          una <b>RESTful API</b> que yo desarrollé. En este proyecto, desarrollé <b>tres</b> hooks para la aplicación, y en este caso, usé el
-          <b>Context API</b> en vez de <b>Redux</b> ya que no es un proyecto muy grande. Y como hize la aplicación móvil, decidí no hacer a
-          Pizzacode una PWA.
+          <b>Pizzacode</b> is a fictional pizzeria website developed using the MERN Stack (MongoDB, Express, React, and Node.js). This project features a
+          user-friendly shopping cart that allows customers to easily add and manage their orders. Additionally, it incorporates customizable themes based
+          on user preferences, enhancing the overall user experience. Pizzacode marked a significant milestone in my development journey as it was my
+          first major project utilizing React and Context after completing a UI/UX design course.
         </p>
-        <div id='infoPizzacodeWebButton' style={styles.infoButton}>Ver más +</div>
+        <div id='infoPizzacodeWebButton' style={styles.infoButton}>See more +</div>
       </div>
 
       <div id='carouselPizzacodeWeb' className="carouselProyects" style={styles.carousel}>
@@ -64,50 +64,50 @@ export const Proyecto2 = () => {
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Parte de la página principal de Pizzacode. Pizzacode es capaz de detectar el tema de tu dispositivo y aplicarlo en todo el sitio.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_171703_ahyvua.jpg'
+          alt='Part of the main page of Pizzacode. Pizzacode is able to detect the theme of your device and apply it throughout the site.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_171703_ahyvua.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Esto es parte del menú. Desde aquí, puedes escoger los productos que quieras y están separados en tres categorías.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172415_og36zm.jpg'
+          alt='This is part of the menu. From here, you can choose the products you want and they are separated into three categories.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172415_og36zm.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Este es el buscador. Aquí puedes buscar los productos por nombre o con alguna palabra clave.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172556_z7vtp3.jpg'
+          alt='This is the seeker. Here you can search for products by name or with a keyword.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172556_z7vtp3.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Así es como se ve el carrito de compras. Tienes la opción de eliminar, modificar la cantidad y agregar productos desde ahí.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172453_k6dem0.jpg'
+          alt='This is what the shopping cart looks like. You have the option to delete, modify the quantity and add products from there.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172453_k6dem0.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Cada vez que eliminas, agregas o modificas algún producto, ya sea desde aquí o desde la página anterior, se calcula todo en tiempo real.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615285/Captura_de_pantalla_2022-07-23_172523_syug8l.jpg'
+          alt='Every time you delete, add or modify a product, either from here or from the previous page, everything is calculated in real time.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615285/Captura_de_pantalla_2022-07-23_172523_syug8l.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Así es la página donde puedes ver la información de tu cuenta. Aquí puedes cambiar tu contraseña, ver el historial de pagos y demás...'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172659_hkqx9z.jpg'
+          alt='This is the page where you can see your account information. Here you can change your password, view payment history and more...'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_172659_hkqx9z.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Incluso, puedes editar o añadir tarjetas de credito o débito de una manera muy interactiva y dinámica.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658615285/Captura_de_pantalla_2022-07-23_172740_cgzild.jpg'
+          alt='You can even edit or add credit or debit cards in a very interactive and dynamic way.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615285/Captura_de_pantalla_2022-07-23_172740_cgzild.jpg'
         />
       </div>
     </div>

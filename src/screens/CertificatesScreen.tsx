@@ -1,12 +1,12 @@
 import { NavbarColumn } from "../components/Navbars/NavbarColumn"
-import { Part1, CertificadoComponent } from "../components/Certificados/"
-
-import * as data from '../dataCertificados.json';
 import { useScroll } from "../hooks/useScroll";
-import { Footer } from "../components/Footer";
 
+import * as data from '../dataCertificadosEN.json';
+import { Part1EN, CertificadoComponentEN } from "../components/Certificados/";
 
-export const CertificadosScreen = () => {
+import { FooterEN } from "../components/FooterEN";
+
+export const CertificatesScreen = () => {
 
   useScroll();
   
@@ -22,14 +22,14 @@ export const CertificadosScreen = () => {
     }}>
       <NavbarColumn whatScreen="CertificadosScreen" />
 
-      <Part1 />
+      <Part1EN />
 
       {
         dataArray.map(certificado => {
           if (certificado.id === undefined) return null;
 
           return (
-            <CertificadoComponent
+            <CertificadoComponentEN
               key={certificado.id}
               id={certificado.id}
               whatIs={certificado.whatIs}
@@ -40,7 +40,7 @@ export const CertificadosScreen = () => {
         })
       }
 
-      <Footer />
+      <FooterEN />
     </div>
   )
 }

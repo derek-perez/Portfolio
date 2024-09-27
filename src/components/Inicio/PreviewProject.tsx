@@ -1,13 +1,9 @@
-import { useEffect, useRef } from "react"
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react"
 
 import { useShow } from "../../hooks/useShow";
 
 
 export const PreviewProject = ({ which = 0 }: { which: number }) => {
-
-    const clicked = useRef(false);
-    const navigate = useNavigate();
 
     useShow({
         p: 'pInfoProyectos',
@@ -17,27 +13,24 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
 
 
     const infos = [
-        `<b>Blogi</b>, fue uno de mis primeros proyectos relevantes que hice utilizando como Backend: NodeJs. <b>Blogi</b> utiliza una <b>RESTful API</b> 
-            que yo mismo desarrollé y en ese momento, aún no implementaba en mis proyectos "React", 
-            así que para el Frontend solo utilizo: <b>HTML</b>, <b>CSS</b> y <b>JavaScript</b>. <b>Blogi</b> es un administrador de blogs donde puedes alojar 
-            tus blogs personales y también ver los de otros usuarios, tiene un foro y también es una <b>PWA</b> con <b>Notificaciones PUSH</b>, entre otras cosas...`,
-        `<b>Pizzacode</b>, fue uno de mis primeros proyectos usando la pila "MERN" (MongoDB, Express, ReactJs, NodeJs). <b>Pizzacode</b> también utiliza
-            una <b>RESTful API</b> que yo desarrollé. En este proyecto, desarrollé <b>tres</b> hooks para la aplicación, y en este caso, usé el
-            <b>Context API</b> en vez de <b>Redux</b> ya que no es un proyecto muy grande. Como iba a hacer la aplicación móvil, decidí no hacer a
-            Pizzacode una PWA.`,
-        `También desarrollé la aplicación móvil para <b>Pizzacode</b> desde cero (actualmente solo para Android). Esta está desarrollada utilizando
-            el <b>CLI</b> de <b>React Native</b> (no uso Expo). Utilizé el mismo Backend, los mismos hooks y algunos <b>Contexts</b> que utilizé para
-            el sitio web. La ventaja de utilizar React para desarrollar aplicaciones web y móviles, es que practicamente, puedes utilizar casi todo el mismo
-            código para las dos versiones, así que te ahorras mucho tiempo, recursos y código para desarrollar ambas aplicaciones.`
+        `<b>ChatCTS</b> is an instant messaging and video calling app, built using the MERN Stack (MongoDB, Express, React, and Node.js) and Socket.IO for
+            real-time communication. The app offers advanced functionalities such as real-time chat, video and voice calls using WebRTC, ensuring a smooth and
+            fast experience. It implements custom push notifications, allowing users to receive real-time alerts when they receive messages or calls, which
+            improves the interactivity of the app.`,
+        `<b>Pizzacode</b> is a fictional pizzeria website developed using the MERN Stack (MongoDB, Express, React, and Node.js). This project features a
+            user-friendly shopping cart that allows customers to easily add and manage their orders. Additionally, it incorporates customizable themes based
+            on user preferences, enhancing the overall user experience. Pizzacode marked a significant milestone in my development journey as it was my
+            first major project utilizing React and Context after completing a UI/UX design course.`,
+        `<b>Blogi</b>, is an interactive blog management platform developed using Node.js for the backend and a frontend built with HTML, CSS, and JavaScript.
+            This project enables users to create their own blogs and publish articles that are accessible to others. I implemented a rich text editor,
+            allowing users to format their content with bold, italic, and underline options, as well as align text and add images to enhance their articles.
+            Additionally, Blogi features a forum for user interaction, which notifies users of new comments via push notifications, fostering community engagement.
+            Notably, Blogi is my first Progressive Web App (PWA), providing improved accessibility and performance.`,
     ]
 
     useEffect(() => {
         const pInfoProyectos = document.querySelector('#pInfoProyectos');
         if (!pInfoProyectos) return;
-
-        if (which === 0) document.getElementById('miniProjects')!.style.justifyContent = 'flex-start';
-        if (which === 1) document.getElementById('miniProjects')!.style.justifyContent = 'center';
-        if (which === 2) document.getElementById('miniProjects')!.style.justifyContent = 'flex-end';
 
         pInfoProyectos.innerHTML = infos[which];
     }, [which]);
@@ -51,82 +44,71 @@ export const PreviewProject = ({ which = 0 }: { which: number }) => {
                 alignItems: 'center'
             }}>
                 <p id='pInfoProyectos' className="textHidden" style={styles.info}></p>
-                <div id='infoProyectosButton' style={styles.infoButton}>Ver más +</div>
+                <div id='infoProyectosButton' style={styles.infoButton}>See more +</div>
             </div>
 
             <div
                 id='miniProjects'
                 style={styles.miniProjects}
             >
-                <div
-                    id="previewBlogi"
-                    style={{
-                        ...(which === 0) ? styles.miniProject : styles.inactiveMiniProject,
-                        transition: '0.5s'
-                    }}
-                >
-                    <h3 style={styles.titleProject}>Blogi</h3>
-                    <p style={styles.contentProject}>
-                        Blogi se basa en una arquitectura de sistemas web RESTful, es una PWA con un
-                        sistema de Notificaciones PUSH, también cuenta con un foro...
-                    </p>
-                    <div
-                        className='seeProjectBTN'
-                        style={styles.buttonProject}
-                        onClick={() => {
-                            navigate('/proyectos/#Blogi')
-                        }}
-                    >
-                        <span>Ver proyecto</span>
-                        <i style={{ fontSize: '30px' }} className="fa fa-long-arrow-right"></i>
-                    </div>
-                </div>
-                <div
-                    id='previewPizzacodeWeb'
-                    style={{
-                        ...(which === 1) ? styles.miniProject : styles.inactiveMiniProject,
-                        transition: '0.5s'
-                    }}
-                >
-                    <h3 style={styles.titleProject}>Pizzacode Web</h3>
-                    <p style={styles.contentProject}>
-                        Pizzacode es un sitio web desarrollado con ReactJs.
-                        Esta basado en una arquitectura de sistemas web RESTful API.
-                        Este es un sitio e-commerce...
-                    </p>
-                    <div
-                        style={styles.inactiveButtonProject}
-                        onClick={() => {
-                            navigate('/proyectos/#Pizzacode_Web')
-                        }}
-                    >
-                        <span>Ver proyecto</span>
-                        <i style={{ fontSize: '30px' }} className="fa fa-long-arrow-right"></i>
-                    </div>
-                </div>
-                <div
-                    id='previewPizzacodeMovil'
-                    style={{
-                        ...(which === 2) ? styles.miniProject : styles.inactiveMiniProject,
-                        transition: '0.5s',
-                        marginRight: 0
-                    }}
-                >
-                    <h3 style={styles.titleProject}>Pizzacode Móvil</h3>
-                    <p style={styles.contentProject}>
-                        La aplicación de Pizzacode también está disponible para dispositivos Android (actualmente no pudeo para iOS).
-                        Está desarrollada con React Native CLI y usa el mismo Backend que el sitio web...
-                    </p>
-                    <div
-                        style={styles.inactiveButtonProject}
-                        onClick={() => {
-                            navigate('/proyectos/#Pizzacode_Movil')
-                        }}
-                    >
-                        <span>Ver proyecto</span>
-                        <i style={{ fontSize: '30px' }} className="fa fa-long-arrow-right"></i>
-                    </div>
-                </div>
+                {
+                    which === 0 && (
+                        <>
+                            <div>
+                                <img src="https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1727459768/Screenshot_2024-09-27_at_11-55-49_ChatCTS_-_Connect_Talk_Share_bo81ks.png" style={styles.image}></img>
+                            </div>
+                            <div style={{ marginLeft: '10px' }}>
+                                <p><b>ChatCTS – Real-time messaging app with video calls</b></p>
+                                <ul>
+                                    <li style={styles.listItem}><b>Technologies</b>: React, Node.js, MongoDB, Express, Socket.IO, WebRTC.</li>
+                                    <li style={styles.listItem}>I developed a real-time messaging platform with video calls, push notification handling, and an intuitive user interface.</li>
+                                    <li style={styles.listItem}>Implemented WebRTC for video calls and WebSockets for real-time communication.</li>
+                                    <li style={styles.listItem}>Managed the design and user experience using Figma.</li>
+                                </ul>
+                            </div>
+                        </>
+                    )
+                }
+                {
+                    which === 1 && (
+                        <>
+                            <div>
+                                <img src="https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658615284/Captura_de_pantalla_2022-07-23_171703_ahyvua.jpg" style={styles.image}></img>
+                            </div>
+                            <div style={{ marginLeft: '10px' }}>
+                                <p><b>Pizzacode – Interactive website for a fictional pizzeria</b></p>
+                                <ul>
+                                    <li style={styles.listItem}><b>Technologies</b>: React, Node.js, MongoDB, Express</li>
+                                    <li style={styles.listItem}>I developed a fully functional ecommerce platform with a shopping cart, allowing users to easily add and manage products.</li>
+                                    <li style={styles.listItem}>I implemented a theme customization system, adapting the user interface according to the client's preferences.</li>
+                                    <li style={styles.listItem}>It was my first major project using React and Context, applying UI/UX design principles learned in a specialized course.</li>
+                                    <li style={styles.listItem}>Managed the design and user experience using Figma.</li>
+                                </ul>
+                            </div>
+                        </>
+
+                    )
+                }
+                {
+                    which === 2 && (
+                        <>
+                            <div>
+                                <img src="https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-07-23_151543_sypwsx.jpg" style={styles.image}></img>
+                            </div>
+                            <div style={{ marginLeft: '10px' }}>
+                                <p><b>Blogi – Interactive Blog Manager</b></p>
+                                <ul>
+                                    <li style={styles.listItem}><b>Technologies</b>: Node.js, HTML, CSS, JS</li>
+                                    <li style={styles.listItem}>I implemented a rich text editor that allows formatting text (bold, italics, underline) and aligning content, as well as adding images to articles.</li>
+                                    <li style={styles.listItem}>I included a forum for user interaction with push notifications to keep them informed about new comments, improving community participation.</li>
+                                    <li style={styles.listItem}>Blogi is my first Progressive Web App (PWA), improving site accessibility and performance.</li>
+                                </ul>
+                            </div>
+                        </>
+
+                    )
+                }
+
             </div>
         </div>
     )
@@ -160,70 +142,19 @@ const styles = {
     },
 
     miniProjects: {
-        width: '90%',
+        width: '95%',
         display: 'flex',
-        alignItems: 'center',
+        justifyContent: 'space-between',
         marginTop: '25px',
-        overflow: 'auto',
         padding: '10px'
     },
-    miniProject: {
-        display: 'flex',
-        flexDirection: 'column' as 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        backgroundColor: '#A5ACAF',
-        height: '275px',
-        minWidth: '300px',
-        maxWidth: '300px',
-        padding: '0 15px 25px 15px',
-        borderRadius: '5px',
-        color: 'black',
-        boxShadow: '4px 4px 8px #222',
-        marginRight: '25px'
-    },
-    inactiveMiniProject: {
-        display: 'flex',
-        flexDirection: 'column' as 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        backgroundColor: '#A5ACAF',
-        height: '250px',
-        minWidth: '300px',
-        maxWidth: '300px',
-        padding: '0 15px 25px 15px',
-        borderRadius: '5px',
-        color: '#555',
-        opacity: 0.5,
-        marginRight: '25px'
-    },
 
-    titleProject: {
-        fontSize: '23px',
-        marginBottom: 0,
-        alignSelf: 'flex-start'
+    image: {
+        maxHeight: '250px',
+        border: '3px solid #69BE28',
+        borderRadius: '5px'
     },
-    contentProject: {
-        fontSize: '20px'
-    },
-    inactiveButtonProject: {
-        width: '80%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        fontSize: '20px',
-        color: '#002244ba',
-        fontWeight: 'bold',
-        cursor: 'pointer'
-    },
-    buttonProject: {
-        width: '80%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        fontSize: '20px',
-        color: '#002244',
-        fontWeight: 'bold',
-        cursor: 'pointer'
+    listItem: {
+        marginBottom: '10px'
     }
 }

@@ -1,5 +1,5 @@
-import { Footer } from "../Footer";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { FooterEN } from "../FooterEN";
 
 
 export const Part5 = () => {
@@ -7,19 +7,19 @@ export const Part5 = () => {
     const navigate = useNavigate();
 
     return (
-        <div id='CV_y_Contacto' className="section" style={styles.container}>
+        <div id='CV_and_Contact' className="section" style={styles.container}>
             <div style={styles.content}>
                 <h2 style={{ textAlign: 'center', width: '80%' }}>
-                    ¿Qué te ha parecido...? Vamos a ponernos en contacto para desarrollar tu proyecto
+                    ¿What do you think...? Let's get in touch to develop your project
                 </h2>
 
                 <p style={styles.text}>
-                    Esto ha sido una pequeña muestra de lo que soy y lo que hago, si quieres saber más acerca de mi,
-                    puedes seguir navegando por el sitio. Ahora, para contactarme, solo rellena un pequeño formulario
-                    y así poder negociar y llegar a un acuerdo para el desarrollo de ese proyecto que traes en mente.
+                    This has been a small sample of what I am and what I do, if you want to know more about me,
+                    you can continue browsing the site. Now, to contact me, just fill out a small form
+                    and thus be able to negotiate and reach an agreement for the development of that project that you have in mind.
                     <br/>
                     <br/>
-                    Y también puedes ver mi CV (curriculum vitae) <a style={{color: 'white'}} href="https://drive.google.com/file/d/1XGgLYxNurrOMZxpKyd2xUKTiKUkknGiW/view?usp=sharing">aquí</a>
+                    And also, you can see my CV (curriculum vitae) <a style={{color:'white'}} href='https://drive.google.com/file/d/1XJ1noR9Zsufx00HyBGEdT_W_F7cEUDEx/view?usp=sharing'>here</a>
                 </p>
 
                 <button
@@ -28,12 +28,12 @@ export const Part5 = () => {
                     }}
                     style={styles.button}
                 >
-                    Rellenar formulario
+                    Fill out the form
                     <i className="fa fa-long-arrow-right"></i>
                 </button>
             </div>
 
-            <Footer />
+            <FooterEN />
         </div>
     )
 }

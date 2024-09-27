@@ -4,12 +4,7 @@ import { Link } from "react-router-dom"
 
 export const NavbarResponsive = () => {
 
-    const [lng, setLng] = useState('');
-
     useEffect(() => {
-        const currentPage = window.location.pathname;
-        currentPage.includes('es') ? setLng('es') : setLng('en');
-
         const closeNavbarResponsive = document.getElementById('closeNavbarResponsive');
         const listener = () => {
             document.getElementById('navbarResponsive')!.classList.remove('animate__fadeIn');
@@ -31,7 +26,7 @@ export const NavbarResponsive = () => {
             <div style={styles.content}>
                 <i id='closeNavbarResponsive' className="fa fa-close" style={styles.icon}></i>
 
-                <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'}>
+                <Link to='/en/#Introduction'>
                     <img
                         src='https://dewey.tailorbrands.com/production/brand_version_mockup_image/872/7596161872_9e1bc302-a4d5-4889-8da9-f5fa4e6ac5d9.png?cb=1657994260'
                         style={styles.img}
@@ -39,29 +34,16 @@ export const NavbarResponsive = () => {
                 </Link>
 
                 <div style={styles.navLinks}>
-                    <Link to={lng === 'es' ? '/es/#Introducción' : '/en/#Introduction'} className='links' style={styles.link}>
-                        <i className="fa fa-home"></i> &nbsp;
-                        {
-                            lng === 'es' ? 'Inicio' : 'Home'
-                        }
+                    <Link to='/en/#Introduction' className='links' style={styles.link}>
+                        <i className="fa fa-home"></i> &nbsp; Home
                     </Link>
-                    <Link to={lng === 'es' ? '/es/proyectos/#Introducción' : '/en/projects/#Introduction'} className='links' style={styles.link}>
-                        <i className="fa fa-address-book"></i> &nbsp;
-                        {
-                            lng === 'es' ? 'Proyectos' : 'Projects'
-                        }
+                    <Link to='/en/projects/#Introduction' className='links' style={styles.link}>
+                        <i className="fa fa-address-book"></i> &nbsp; Projects
                     </Link>
-                    <Link to={lng === 'es' ? '/es/certificados/#Introducción' : '/en/certificates/#Introduction'} className='links' style={styles.link}>
-                        <i className="fa fa-vcard"></i> &nbsp;
-                        {
-                            lng === 'es' ? 'Certificados' : 'Certificates'
-                        }
-                    </Link>
-                    <Link to={lng === 'es' ? '/es/contacto/' : '/en/contact/'} className='links' style={styles.link}>
-                        <i className="fa fa-phone"></i> &nbsp;
-                        {
-                            lng === 'es' ? 'Contacto' : 'Contact'
-                        }
+                    <Link to='/en/certificates/#Introduction' className='links' style={styles.link}>
+                        <i className="fa fa-vcard"></i> &nbsp; Certificates</Link>
+                    <Link to='/en/contact/' className='links' style={styles.link}>
+                        <i className="fa fa-phone"></i> &nbsp; Contact
                     </Link>
                 </div>
             </div>

@@ -184,6 +184,12 @@ body {
   }
 }
 
+@media (max-width: 980px) {
+  .someSkill {
+    width: 80% !important;
+  }
+}
+
 @media (max-width: 890px) {
   #textIntro {
     flex-direction: column-reverse;

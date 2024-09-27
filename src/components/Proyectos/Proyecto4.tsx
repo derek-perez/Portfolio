@@ -4,9 +4,9 @@ import { useShow } from "../../hooks/useShow";
 export const Proyecto4 = () => {
 
   useShow({
-    p: 'infoPizzacodeMovil',
-    button: 'infoPizzacodeMovilButton',
-    width: 921
+    p: 'infoNasadex',
+    button: 'infoNasadexButton',
+    width: 608
   })
 
   const handleClick = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
@@ -28,17 +28,26 @@ export const Proyecto4 = () => {
 
 
   return (
-    <div id='Desarrollo_Móvil Pizzacode_Movil' className="section" style={styles.container}>
+    <div id='Mobile_Development NasaDex' className="section" style={styles.container}>
+      <h1 style={{
+        color: '#69BE28',
+        borderBottom: '2px solid #69BE28',
+        textShadow: '2px 2px 2px rgba(0, 0, 0, 0.9)'
+      }}
+      >
+        Mobile Development
+      </h1>
+
       <p style={styles.title}>
-        Proyecto #4: <b>Pizzacode Móvil</b>
+        Project #4: <b>NasaDex</b> - 2022
       </p>
 
       <b style={{ margin: '20px 0', width: '80%', textAlign: 'center' }}>
-        Código fuente: <a href="https://github.com/chugus/Pizzacode-RN.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/Pizzacode-RN.git</a>
+        Source code: <a href='https://github.com/chugus/NasaDex.git' style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/NasaDex.git</a>
       </b>
 
       <b style={{ width: '80%', textAlign: 'center', marginBottom: '20px' }}>
-        Aplicación solo disponible para Android
+        Application only available for Android
       </b>
 
       <div style={{
@@ -46,57 +55,43 @@ export const Proyecto4 = () => {
         flexDirection: 'column',
         alignItems: 'center'
       }}>
-        <p id='infoPizzacodeMovil' className="textHidden" style={styles.infoProyect}>
-          También desarrollé la aplicación móvil para <b>Pizzacode</b> desde cero (actualmente solo para Android). Esta está desarrollada utilizando
-          el <b>CLI</b> de <b>React Native</b> (no uso Expo). Utilizé el mismo Backend, los mismos hooks y algunos <b>Contexts</b> que utilizé para
-          el sitio web. La ventaja de utilizar React para desarrollar aplicación web y móvil, es que practicamente, puedes utilizar casi todo el mismo
-          código para las dos aplicaciones, así que te ahorras mucho tiempo, recursos y código para desarrollar ambas aplicaciones.
+        <p id='infoNasadex' className="textHidden" style={styles.infoProyect}>
+          This was one of my first apps that I developed with React Native. This application shows images of one of
+          the NASA databases that exist to obtain images of it. This application has an "Infinite Scroll" (or Infinite Scroll).
+          The truth is that it is fun to navigate through it from time to time...
         </p>
-        <div id='infoPizzacodeMovilButton' style={styles.infoButton}>Ver más +</div>
+        <div id='infoNasadexButton' style={styles.infoButton}>See more +</div>
       </div>
 
-      <div id='carouselPizzacodeMovil' className="carouselProyects" style={styles.carousel}>
+      <div id='carouselNasadex' className="carouselProyects" style={styles.carousel}>
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Parte de la página principal de la aplicación móvil Pizzacode. Aquí, a diferencia del sitio web, hay carruseles en la página principal.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658632450/Screenshot_20220723-180621_Pizzacode_f7onr8.jpg'
+          alt='This is what the main screen of the app looks like. They are small cards that have the primary color as the background (well, it is expected).'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658697521/20220724_155019_fciswo.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='En la aplicación móvil, también es capaz de detectar el tema del dispositivo y aplicarlo en el tema de la aplicación.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658632478/Screenshot_20220723-180634_Pizzacode_l9rgov.jpg'
+          alt='When you click on any card, this screen is overlaid, where you see the image, the title and additional data on it.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658697522/20220724_155046_luft9r.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Así es como se ve el menú. Está dividido en tres categorias y algo característico es su "Navigator" (o navegador)'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658632543/Screenshot_20220723-180626_Pizzacode_i5guby.jpg'
+          alt='This is the application search engine. Here you can search for some cards and see their content.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658697521/20220724_155054_sreamw.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Este es el buscador de la aplicación. Aquí puedes buscar los productos por nombre o por una palabra clave.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658632567/Screenshot_20220723-180645_Pizzacode_r4w7up.jpg'
-        />
-        <img
-          style={styles.img}
-          onClick={handleClick}
-          className='imgCarousel'
-          alt='Cada vez que eliminas, agregas o modificas algún producto, ya sea desde aquí o desde la página anterior, se calcula todo en tiempo real.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658632512/Screenshot_20220723-180708_Pizzacode_wr1d06.jpg'
-        />
-        <img
-          style={styles.img}
-          onClick={handleClick}
-          className='imgCarousel'
-          alt='Así es la página donde puedes ver la información de tu cuenta. Aquí puedes cambiar tu contraseña, ver el historial de pagos y demás...'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658632597/Screenshot_20220723-180738_Pizzacode_k8x519.jpg'
+          alt='When you click on any card, this screen is overlaid, where you see the image, the title and additional data on it.
+          The best thing is that the state is maintained so that, even if you continue browsing the main page, when you return, everything continues as it was.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658697522/20220724_155103_hi2cdp.jpg'
         />
       </div>
     </div>

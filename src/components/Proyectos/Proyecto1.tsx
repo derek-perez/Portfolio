@@ -28,18 +28,18 @@ export const Proyecto1 = () => {
 
 
     return (
-        <div id='Desarrollo_Web Blogi' className="section" style={styles.container}>
+        <div id='Web_Development Blogi' className="section" style={styles.container}>
             <h1 style={{
                 color: '#69BE28',
                 borderBottom: '2px solid #69BE28',
                 textShadow: '2px 2px 2px rgba(0, 0, 0, 0.9)'
             }}
             >
-                Desarrollo Web
+                Web Development
             </h1>
 
             <p style={styles.title}>
-                Proyecto #1: <b>Blogi</b>
+                Project #1: <b>Blogi</b> - 2021
             </p>
 
             <b style={{ margin: '15px 0', width: '80%', textAlign: 'center' }}>
@@ -47,7 +47,7 @@ export const Proyecto1 = () => {
             </b>
 
             <b style={{ width: '80%', textAlign: 'center', marginBottom: '20px' }}>
-                Parte del código fuente: <a href="https://github.com/chugus/blog-node.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/blog-node.git</a>
+                Part of the source code: <a href="https://github.com/chugus/blog-node.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/blog-node.git</a>
             </b>
 
             <div style={{
@@ -56,16 +56,13 @@ export const Proyecto1 = () => {
                 alignItems: 'center'
             }}>
                 <p id='infoBlogi' className="textHidden" style={styles.infoProyect}>
-                    <b>Blogi</b>, fue uno de mis primeros proyectos relevantes que hice utilizando como Backend: NodeJs. <b>Blogi</b> utiliza una <b>RESTful </b>
-                    que yo mismo desarrollé y en ese momento, aún no implementaba en mis proyectos "React",
-                    así que para el Frontend solo utilizo: <b>HTML</b>, <b>CSS</b> y <b>JavaScript</b>. <b>Blogi</b> es un administrador de blogs donde puedes
-                    alojar tus blogs personales y también ver los de otros usuarios, tiene un foro y también es una <b>PWA</b> con <b>Notificaciones PUSH</b>,
-                    entre otras cosas...
-                    <br />
-                    <br />
-                    Eso sí, para crear un blog, debes escoger un plan, el "Plan Premium" es de pago, y te aparecerá una ventana de MercadoPago, pero solo es para pruebas.
+                    <b>Blogi</b>, is an interactive blog management platform developed using Node.js for the backend and a frontend built with HTML, CSS, and JavaScript.
+                    This project enables users to create their own blogs and publish articles that are accessible to others. I implemented a rich text editor,
+                    allowing users to format their content with bold, italic, and underline options, as well as align text and add images to enhance their articles.
+                    Additionally, Blogi features a forum for user interaction, which notifies users of new comments via push notifications, fostering community engagement.
+                    Notably, Blogi is my first Progressive Web App (PWA), providing improved accessibility and performance.
                 </p>
-                <div id='infoBlogiButton' style={styles.infoButton}>Ver más +</div>
+                <div id='infoBlogiButton' style={styles.infoButton}>See more +</div>
             </div>
 
             <div id='carouselBlogi' className="carouselProyects" style={styles.carousel}>
@@ -73,51 +70,51 @@ export const Proyecto1 = () => {
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Parte de la página principal de Blogi. En Blogi puedes cambiar el tema de la aplicación a oscuro o claro.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115646_q2wnfj.jpg'
+                    alt='Part of the main page of Blogi. In Blogi you can change the app theme to dark or light.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115646_q2wnfj.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Esta es la página para iniciar sesión. Y la página para registrarse es muy similar. Y también, puedes acceder con tu cuenta de Google.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115732_pojbw6.jpg'
+                    alt='This is the login page. And the register page is very similar. And also, you can sign in with your Google account.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115732_pojbw6.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Hay una página dedicada completamente a los artículos, donde podrás ver los más recientes y separados por categorías.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-07-23_151543_sypwsx.jpg'
+                    alt='There is a page completely dedicated to the articles, where you can see the most recent and separated by categories.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-07-23_151543_sypwsx.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Así es como se ve un artículo en Blogi. Puedes ver la información del autor y hasta compartir el artículo en redes sociales.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658609266/Captura_de_pantalla_2022-07-23_154630_vhouwx.jpg'
+                    alt="This is what an article looks like on Blogi. You can see the author's information and even share the article on social networks."
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658609266/Captura_de_pantalla_2022-07-23_154630_vhouwx.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Este es el "Dashboard" (o Panel de control) que tienes cuando creas una cuenta en Blogi y has escogido un plan.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115803_xljulf.jpg'
+                    alt='This is the "Dashboard" (or Control Panel) that you have when you create a Blogi account and have chosen a plan.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115803_xljulf.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Desarrollé un pequeño "Word" para la redacción/edición del artículo, puedes cambiar el tamaño de la letra, la alineación del texto,
-                    puedes agregar alguna imágen mediante una URL o desde tus archivos.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_120239_add8w9.jpg'
+                    alt='I developed a small "Word" for the writing/editing of the article, you can change the size of the font, the alignment of the text,
+                    you can add some image through a URL or from your files.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_120239_add8w9.jpg'
                 />
                 <img
                     style={styles.img}
                     onClick={handleClick}
                     className='imgCarousel'
-                    alt='Esta es la página de "Configuración". Aquí puedes editar tu información personal y cambiar la contraseña de tu cuenta.'
-                    src='https://res.cloudinary.com/chugus/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115844_epodk0.jpg'
+                    alt='This is the "Settings" page. Here you can edit your personal information and change your account password.'
+                    src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658607554/Captura_de_pantalla_2022-06-03_115844_epodk0.jpg'
                 />
             </div>
         </div>

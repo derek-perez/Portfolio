@@ -4,9 +4,9 @@ import { useShow } from "../../hooks/useShow";
 export const Proyecto5 = () => {
 
   useShow({
-    p: 'infoHabitual',
-    button: 'infoHabitualButton',
-    width: 554
+    p: 'infoPizzacodeMovil',
+    button: 'infoPizzacodeMovilButton',
+    width: 921
   })
 
   const handleClick = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
@@ -20,35 +20,25 @@ export const Proyecto5 = () => {
     modalImageCarousel.style.display = 'block';
 
     modalImageCarousel_img.src = img.src;
-    modalImageCarousel_img.style.maxHeight = 'auto';
-    modalImageCarousel_img.style.width = '90%';
-
-    if (img.classList.contains('verticalImg')) {
-      modalImageCarousel_img.style.maxHeight = '412px';
-      modalImageCarousel_img.style.width = 'auto';
-    }
+    modalImageCarousel_img.style.maxHeight = '412px';
+    modalImageCarousel_img.style.width = 'auto';
 
     modalImageCarousel_alt.innerHTML = img.alt;
   }
 
 
   return (
-    <div id='UI_UX Habitual' className="section" style={styles.container}>
-      <h1 style={{
-        color: '#69BE28',
-        borderBottom: '2px solid #69BE28',
-        textShadow: '2px 2px 2px rgba(0, 0, 0, 0.9)'
-      }}
-      >
-        Diseño UI/UX
-      </h1>
-
+    <div id='Mobile_Development Pizzacode_Mobile' className="section" style={styles.container}>
       <p style={styles.title}>
-        Proyecto #5: <b>Habitual</b>
+        Project #5: <b>Pizzacode Mobile</b> - 2022
       </p>
 
-      <b style={{ width: '80%', textAlign: 'center', margin: '20px' }}>
-        Este proyecto aún no ha sido codificado, solo diseñado...
+      <b style={{ margin: '20px 0', width: '80%', textAlign: 'center' }}>
+        Source code: <a href="https://github.com/chugus/Pizzacode-RN.git" style={{ color: 'white', fontWeight: '400' }}>https://github.com/chugus/Pizzacode-RN.git</a>
+      </b>
+
+      <b style={{ width: '80%', textAlign: 'center', marginBottom: '20px' }}>
+        Application only available for Android
       </b>
 
       <div style={{
@@ -56,42 +46,57 @@ export const Proyecto5 = () => {
         flexDirection: 'column',
         alignItems: 'center'
       }}>
-        <p id='infoHabitual' className="textHidden" style={styles.infoProyect}>
-          Este es el primer proyecto que diseñé desde un boceto, hasta el diseño de alta fidelidad. Se trata de una aplicación que funciona como Amazon o
-          MercadoLibre donde está una página principal, una lista de deseos, un buscador y un carrito. Lo diseñé con ayuda de <b>Figma</b>, donde hay un
-          propotipo...
+        <p id='infoPizzacodeMovil' className="textHidden" style={styles.infoProyect}>
+          I also developed the mobile app for <b>Pizzacode</b> from scratch (currently only for Android). This is developed using
+          the <b>CLI</b> of <b>React Native</b> (I don't use Expo). I used the same Backend, the same hooks and some <b>Contexts</b> that I used for
+          the website. The advantage of using React to develop web and mobile applications is that practically, you can use almost everything the same
+          code for both applications, so you save a lot of time, resources and code to develop both applications.
         </p>
-        <div id='infoHabitualButton' style={styles.infoButton}>Ver más +</div>
+        <div id='infoPizzacodeMovilButton' style={styles.infoButton}>See more +</div>
       </div>
 
-      <div id='carouselHabitual' className="carouselProyects" style={styles.carousel}>
+      <div id='carouselPizzacodeMovil' className="carouselProyects" style={styles.carousel}>
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Este es uno de los bocetos de la aplicación, esto es lo que se hace primero. Es un ejemplo de un flujo de usuario'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658701093/Sketch_03_dex7nm.svg'
+          alt='Part of the home page of the Pizzacode mobile app. Here, unlike the website, there are carousels on the main page.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658632450/Screenshot_20220723-180621_Pizzacode_f7onr8.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
           className='imgCarousel'
-          alt='Este es un ejemplo de un flujo de usuario en un "Wireframe" (o Marco de Alambre). Es un diseño con más detalles pero no con muchos.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658702127/Searching_for_a_product_twuaw8.svg'
+          alt='In the mobile app, it is also able to detect the device theme and apply it in the app theme.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658632478/Screenshot_20220723-180634_Pizzacode_l9rgov.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
-          className='imgCarousel verticalImg'
-          alt='Este es parte del diseño de alta fidelidad de la página principal. Como puedes ver, hasta imágenes tiene.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658635571/Home_Logged_In_sc30qc.png'
+          className='imgCarousel'
+          alt='This is what the menu looks like. It is divided into three categories and something characteristic is its "Navigator" (or browser).'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658632543/Screenshot_20220723-180626_Pizzacode_i5guby.jpg'
         />
         <img
           style={styles.img}
           onClick={handleClick}
-          className='imgCarousel verticalImg'
-          alt='Este es un ejemplo de la lista de deseos o "Wishlist", y muestra como quiere que se vea ya codificado.'
-          src='https://res.cloudinary.com/chugus/image/upload/v1658635571/Wishlist_Logged_In_No_List_s76zo3.png'
+          className='imgCarousel'
+          alt='This is the application search engine. Here you can search for products by name or by keyword.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658632567/Screenshot_20220723-180645_Pizzacode_r4w7up.jpg'
+        />
+        <img
+          style={styles.img}
+          onClick={handleClick}
+          className='imgCarousel'
+          alt='Every time you delete, add or modify a product, either from here or from the previous page, everything is calculated in real time.'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658632512/Screenshot_20220723-180708_Pizzacode_wr1d06.jpg'
+        />
+        <img
+          style={styles.img}
+          onClick={handleClick}
+          className='imgCarousel'
+          alt='This is the page where you can see your account information. Here you can change your password, view payment history and more...'
+          src='https://res.cloudinary.com/chuguscloudinarypersonal/image/upload/v1658632597/Screenshot_20220723-180738_Pizzacode_k8x519.jpg'
         />
       </div>
     </div>
@@ -137,7 +142,7 @@ const styles = {
     padding: '10px'
   },
   img: {
-    maxHeight: '20rem',
+    maxHeight: '35rem',
     marginRight: '40px',
     transition: '0.5s',
     cursor: 'pointer'
